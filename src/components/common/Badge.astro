@@ -1,0 +1,27 @@
+---
+interface Props {
+  variant?: "primary" | "neutral" | "amber";
+  size?: "sm" | "md";
+  class?: string;
+}
+
+const { variant = "primary", size = "sm", class: className = "" } = Astro.props;
+
+const variantStyles = {
+  primary: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
+  neutral: "bg-stone-100 text-stone-700 border border-stone-200",
+  amber: "bg-amber-50 text-amber-800 border border-amber-200/60",
+};
+
+const sizeStyles = {
+  sm: "text-xs px-2.5 py-1",
+  md: "text-sm px-3 py-1.5",
+};
+---
+
+<span
+  class={`inline-flex items-center gap-1.5 font-medium rounded-full tracking-wide transition-colors ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+>
+  <slot />
+</span>
+

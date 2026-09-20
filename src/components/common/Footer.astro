@@ -1,0 +1,106 @@
+---
+import { profile } from "../../data/profile";
+import { footerNavItems } from "../../data/navigation";
+import Container from "./Container.astro";
+import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-stone-900 text-stone-300 mt-auto border-t border-stone-800">
+  <Container class="py-14 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12">
+      <!-- Profile Column -->
+      <div class="md:col-span-6 lg:col-span-5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xl font-bold text-white tracking-tight font-display">
+              {profile.name}
+            </span>
+          </div>
+          <p class="text-sm font-medium text-emerald-400 mb-4">
+            {profile.role} · {profile.field}
+          </p>
+          <p class="text-sm text-stone-400 leading-relaxed max-w-[45ch]">
+            Portofolio digital dokumentasi pembelajaran, refleksi kritis, dan karya inovatif selama menempuh program Pendidikan Profesi Guru.
+          </p>
+        </div>
+
+        <div class="mt-8 flex items-center gap-3">
+          {profile.socialLinks.github && (
+            <a
+              href={profile.socialLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-10 h-10 rounded-lg bg-stone-800 flex items-center justify-center text-stone-300 hover:text-white hover:bg-stone-700 transition-colors focus-visible:outline-emerald-500"
+              aria-label="Kunjungi profil GitHub"
+            >
+              <Github class="w-5 h-5" />
+            </a>
+          )}
+          {profile.socialLinks.linkedin && (
+            <a
+              href={profile.socialLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-10 h-10 rounded-lg bg-stone-800 flex items-center justify-center text-stone-300 hover:text-white hover:bg-stone-700 transition-colors focus-visible:outline-emerald-500"
+              aria-label="Kunjungi profil LinkedIn"
+            >
+              <Linkedin class="w-5 h-5" />
+            </a>
+          )}
+          {profile.socialLinks.email && (
+            <a
+              href={profile.socialLinks.email}
+              class="w-10 h-10 rounded-lg bg-stone-800 flex items-center justify-center text-stone-300 hover:text-white hover:bg-stone-700 transition-colors focus-visible:outline-emerald-500"
+              aria-label="Kirim email"
+            >
+              <Mail class="w-5 h-5" />
+            </a>
+          )}
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="md:col-span-3 lg:col-span-4">
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-stone-400 mb-4">
+          Navigasi Halaman
+        </h3>
+        <ul class="space-y-2.5">
+          {footerNavItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-sm text-stone-300 hover:text-emerald-400 transition-colors inline-flex items-center gap-1 group"
+              >
+                <span>{item.label}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Academic Statement -->
+      <div class="md:col-span-3 lg:col-span-3">
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-stone-400 mb-4">
+          Program Pendidikan
+        </h3>
+        <p class="text-sm text-stone-400 leading-relaxed mb-4">
+          Direktorat Jenderal Guru dan Tenaga Kependidikan, Kementerian Pendidikan Dasar dan Menengah Republik Indonesia.
+        </p>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-800/80 border border-stone-700/60 text-xs text-stone-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Semester 1 & 2 Selesai</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="mt-12 pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+      <p>© {currentYear} {profile.name}. Seluruh hak cipta dilindungi.</p>
+      <p class="flex items-center gap-1">
+        <span>Dibangun dengan Astro & Tailwind CSS</span>
+      </p>
+    </div>
+  </Container>
+</footer>

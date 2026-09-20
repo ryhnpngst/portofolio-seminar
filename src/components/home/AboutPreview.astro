@@ -1,0 +1,80 @@
+---
+import Container from "../common/Container.astro";
+import Button from "../common/Button.astro";
+import { ArrowRight, Compass, GraduationCap, Laptop } from "lucide-astro";
+---
+
+<section class="py-16 md:py-24 bg-white border-b border-stone-200/70">
+  <Container>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+      <!-- Left Column: Heading & Context -->
+      <div class="lg:col-span-5">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-900 font-display mb-4">
+          Membangun Pembelajaran yang Berpihak pada Peserta Didik
+        </h2>
+        <p class="text-base text-stone-600 leading-relaxed mb-6">
+          Pendidikan Profesi Guru (PPG) bukan sekadar pemenuhan syarat administratif, melainkan proses transformasi paradigma: dari sekadar pengajar materi Informatika menjadi fasilitator dan penuntun potensi peserta didik.
+        </p>
+        <Button href="/tentang" variant="text" class="inline-flex items-center gap-1.5 text-sm font-semibold">
+          <span>Selengkapnya Tentang Saya</span>
+          <ArrowRight class="w-4 h-4" />
+        </Button>
+      </div>
+
+      <!-- Right Column: 3 Narrative Pillars -->
+      <div class="lg:col-span-7 space-y-6">
+        <!-- Pillar 1 -->
+        <div class="p-6 rounded-[16px] border border-stone-200/80 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0 mt-0.5">
+              <GraduationCap class="w-5 h-5" />
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-stone-900 font-display mb-1.5">
+                Latar Belakang & Panggilan Pendidik
+              </h3>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                Berangkat dari kecintaan pada bidang ilmu komputer dan edukasi, saya terpanggil untuk mendedikasikan keahlian Informatika dalam membangun generasi muda yang bernalar kritis, cakap digital, dan berkarakter Profil Pelajar Pancasila.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-6 rounded-[16px] border border-stone-200/80 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0 mt-0.5">
+              <Laptop class="w-5 h-5" />
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-stone-900 font-display mb-1.5">
+                Informatika Kontekstual & Computational Thinking
+              </h3>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                Saya meyakini bahwa Informatika harus diajarkan secara bermakna (meaningful learning), bukan sekadar hafalan sintaks koding, melainkan penguasaan pola berpikir komputasional yang relevan untuk memecahkan persoalan dunia nyata.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-6 rounded-[16px] border border-stone-200/80 bg-stone-50/50 hover:bg-stone-50 transition-colors">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0 mt-0.5">
+              <Compass class="w-5 h-5" />
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-stone-900 font-display mb-1.5">
+                Refleksi Berkelanjutan sebagai Fondasi
+              </h3>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                Setiap siklus belajar, interaksi di kelas, dan umpan balik dari Guru Pamong serta Dosen Pembimbing menjadi bahan bakar untuk terus memperbaiki strategi mengajar dan memperkuat kompetensi pedagogik.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+

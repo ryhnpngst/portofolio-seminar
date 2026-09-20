@@ -1,0 +1,33 @@
+---
+import Container from "../common/Container.astro";
+import Button from "../common/Button.astro";
+import { ArrowRight, Sparkles } from "lucide-astro";
+---
+
+<section class="py-16 md:py-24 bg-stone-50">
+  <Container>
+    <div class="relative rounded-[24px] p-8 sm:p-12 md:p-16 bg-white border border-stone-200 overflow-hidden text-center flex flex-col items-center">
+      <!-- Subtle top decorative bar -->
+      <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-500"></div>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-emerald-800 text-xs font-semibold mb-6">
+        <Sparkles class="w-3.5 h-3.5 text-emerald-600" />
+        <span>SINTESIS AKHIR PERJALANAN</span>
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-900 font-display mb-4 max-w-[28ch]">
+        Refleksi Akhir: Meneguhkan Identitas Guru Profesional
+      </h2>
+
+      <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-[58ch] mb-8">
+        Bagaimana perjalanan dua semester dan ratusan jam praktik di sekolah mitra merekonstruksi cara pandang saya terhadap dunia pendidikan, peserta didik, dan komitmen masa depan sebagai guru Informatika.
+      </p>
+
+      <Button href="/refleksi-akhir" variant="primary" size="lg">
+        <span>Baca Refleksi Akhir</span>
+        <ArrowRight class="w-4 h-4 ml-2" />
+      </Button>
+    </div>
+  </Container>
+</section>
+

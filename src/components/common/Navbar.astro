@@ -1,0 +1,137 @@
+---
+import { navItems } from "../../data/navigation";
+import { profile } from "../../data/profile";
+import { Menu, X, ArrowRight } from "lucide-astro";
+
+const currentPath = Astro.url.pathname;
+
+const isActive = (href: string) => {
+  if (href === "/") {
+    return currentPath === "/" || currentPath === "";
+  }
+  return currentPath.startsWith(href);
+};
+---
+
+<header
+  class="sticky top-0 z-50 w-full border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-md transition-all duration-200"
+>
+  <div class="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 h-16 md:h-[72px] flex items-center justify-between">
+    <!-- Logo -->
+    <a
+      href="/"
+      class="group flex items-center gap-1.5 text-xl font-bold text-stone-900 tracking-tight font-display transition-colors hover:text-emerald-700 focus-visible:rounded"
+    >
+      <span>{profile.shortName}</span>
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 transition-transform group-hover:scale-125"></span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-1 lg:gap-2" aria-label="Navigasi Utama">
+      {navItems.map((item) => {
+        const active = isActive(item.href);
+        return (
+          <a
+            href={item.href}
+            class={`relative px-3.5 py-2 text-sm font-medium transition-all duration-200 rounded-lg ${
+              active
+                ? "text-emerald-700 bg-emerald-50/80 font-semibold"
+                : "text-stone-600 hover:text-stone-900 hover:bg-stone-100/60"
+            }`}
+            aria-current={active ? "page" : undefined}
+          >
+            {item.label}
+            {active && (
+              <span class="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-emerald-600 rounded-full" />
+            )}
+          </a>
+        );
+      })}
+    </nav>
+
+    <!-- Desktop Secondary CTA -->
+    <div class="hidden md:flex items-center">
+      <a
+        href="/refleksi-akhir"
+        class="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200/80 hover:bg-emerald-100 hover:text-emerald-900 transition-all active:scale-[0.98]"
+      >
+        <span>Refleksi Akhir</span>
+        <ArrowRight class="w-3.5 h-3.5 text-emerald-700" />
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger Button -->
+    <div class="flex items-center md:hidden">
+      <button
+        id="mobile-menu-button"
+        type="button"
+        class="inline-flex items-center justify-center w-11 h-11 rounded-lg text-stone-700 hover:text-stone-900 hover:bg-stone-100 focus-visible:outline-2 focus-visible:outline-emerald-600"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Buka menu navigasi"
+      >
+        <span class="sr-only">Buka menu navigasi</span>
+        <Menu id="icon-menu" class="w-6 h-6 block" />
+        <X id="icon-close" class="w-6 h-6 hidden" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-stone-200/80 bg-stone-50 px-5 pt-3 pb-6 space-y-1 shadow-lg"
+  >
+    <nav class="flex flex-col gap-1" aria-label="Navigasi Mobile">
+      {navItems.map((item) => {
+        const active = isActive(item.href);
+        return (
+          <a
+            href={item.href}
+            class={`px-4 py-3 text-base font-medium rounded-lg transition-colors flex items-center justify-between ${
+              active
+                ? "text-emerald-700 bg-emerald-50 font-semibold"
+                : "text-stone-700 hover:text-stone-900 hover:bg-stone-100"
+            }`}
+            aria-current={active ? "page" : undefined}
+          >
+            <span>{item.label}</span>
+            {active && <span class="w-1.5 h-1.5 rounded-full bg-emerald-600" />}
+          </a>
+        );
+      })}
+      <div class="pt-3 mt-2 border-t border-stone-200">
+        <a
+          href="/refleksi-akhir"
+          class="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
+        >
+          <span>Baca Refleksi Akhir</span>
+          <ArrowRight class="w-4 h-4" />
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const button = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
+  const iconMenu = document.getElementById("icon-menu");
+  const iconClose = document.getElementById("icon-close");
+
+  if (button && menu && iconMenu && iconClose) {
+    button.addEventListener("click", () => {
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", (!isExpanded).toString());
+      button.setAttribute(
+        "aria-label",
+        isExpanded ? "Buka menu navigasi" : "Tutup menu navigasi"
+      );
+
+      menu.classList.toggle("hidden");
+      iconMenu.classList.toggle("hidden");
+      iconClose.classList.toggle("hidden");
+    });
+  }
+</script>
+

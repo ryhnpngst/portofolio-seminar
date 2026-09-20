@@ -1,0 +1,33 @@
+---
+import { featuredReflections } from "../../data/featured";
+import Container from "../common/Container.astro";
+import SectionHeader from "../common/SectionHeader.astro";
+import ReflectionCard from "../reflection/ReflectionCard.astro";
+import Button from "../common/Button.astro";
+import { ArrowRight } from "lucide-astro";
+---
+
+<section class="py-16 md:py-24 bg-stone-50 border-b border-stone-200/70">
+  <Container>
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <SectionHeader
+        title="Refleksi Mata Kuliah Pilihan"
+        description="Dokumentasi kritis terhadap pengalaman belajar, tantangan, dan perubahan perspektif pedagogik dari perkuliahan PPG."
+        class="mb-0!"
+      />
+      <div class="mt-4 md:mt-0">
+        <Button href="/refleksi" variant="secondary" size="md">
+          <span>Lihat Semua Refleksi</span>
+          <ArrowRight class="w-4 h-4 ml-2" />
+        </Button>
+      </div>
+    </div>
+
+    <!-- 3-Column Reflection Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {featuredReflections.map((reflection) => (
+        <ReflectionCard reflection={reflection} />
+      ))}
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,48 @@
+---
+import { profile } from "../../data/profile";
+import Container from "../common/Container.astro";
+
+const statsList = [
+  {
+    value: profile.stats.semesters.toString(),
+    label: "Semester PPG",
+    description: "Semester 1 & 2 tuntas ditempuh",
+  },
+  {
+    value: profile.stats.courses.toString(),
+    label: "Mata Kuliah",
+    description: "Pedagogik, keilmuan & PPL",
+  },
+  {
+    value: profile.stats.reflections.toString(),
+    label: "Refleksi Kritis",
+    description: "Dokumentasi pembelajaran mendalam",
+  },
+  {
+    value: `${profile.stats.works}+`,
+    label: "Karya Pembelajaran",
+    description: "Modul, LKPD & media interaktif",
+  },
+];
+---
+
+<section class="py-12 md:py-16 bg-stone-50 border-b border-stone-200/70">
+  <Container>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {statsList.map((item) => (
+        <div class="p-6 rounded-[16px] bg-white border border-stone-200/80 transition-all hover:border-emerald-300 hover:shadow-xs">
+          <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-700 tracking-tight font-display mb-1">
+            {item.value}
+          </div>
+          <div class="text-base font-semibold text-stone-900 mb-1">
+            {item.label}
+          </div>
+          <p class="text-xs text-stone-500 leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>
+

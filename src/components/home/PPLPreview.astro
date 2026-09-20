@@ -1,0 +1,77 @@
+---
+import { pplHighlight } from "../../data/featured";
+import Container from "../common/Container.astro";
+import Button from "../common/Button.astro";
+import { ArrowRight, Building2, Clock, RotateCcw } from "lucide-astro";
+---
+
+<section class="py-16 md:py-24 bg-white border-b border-stone-200/70">
+  <Container>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <!-- Image Column -->
+      <div class="lg:col-span-6 order-2 lg:order-1">
+        <div class="relative rounded-[20px] overflow-hidden border border-stone-200 shadow-sm bg-stone-100 aspect-[4/3]">
+          <img
+            src={pplHighlight.image}
+            alt={pplHighlight.imageAlt}
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white">
+            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-300 mb-1">
+              Dokumentasi Praktik
+            </p>
+            <p class="text-sm font-medium leading-snug">
+              Kegiatan pembelajaran aktif berbasis kolaborasi di laboratorium komputer sekolah mitra.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="lg:col-span-6 order-1 lg:order-2 flex flex-col items-start">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-900 font-display mb-2">
+          {pplHighlight.title}
+        </h2>
+        <p class="text-base font-semibold text-emerald-700 mb-4">
+          {pplHighlight.subtitle}
+        </p>
+        <p class="text-base text-stone-600 leading-relaxed mb-8">
+          {pplHighlight.description}
+        </p>
+
+        <!-- Stats row -->
+        <div class="grid grid-cols-3 gap-4 w-full mb-8 pt-6 border-t border-stone-200">
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 text-xs text-stone-500 mb-1">
+              <Building2 class="w-3.5 h-3.5 text-emerald-600" />
+              <span>Sekolah</span>
+            </div>
+            <span class="text-sm font-bold text-stone-900">{pplHighlight.stats.schools}</span>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 text-xs text-stone-500 mb-1">
+              <Clock class="w-3.5 h-3.5 text-emerald-600" />
+              <span>Praktik</span>
+            </div>
+            <span class="text-sm font-bold text-stone-900">{pplHighlight.stats.teachingHours}</span>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5 text-xs text-stone-500 mb-1">
+              <RotateCcw class="w-3.5 h-3.5 text-emerald-600" />
+              <span>Siklus</span>
+            </div>
+            <span class="text-sm font-bold text-stone-900">{pplHighlight.stats.cycles}</span>
+          </div>
+        </div>
+
+        <Button href={pplHighlight.link} variant="primary" size="md">
+          <span>Lihat Perjalanan PPL</span>
+          <ArrowRight class="w-4 h-4 ml-2" />
+        </Button>
+      </div>
+    </div>
+  </Container>
+</section>
+

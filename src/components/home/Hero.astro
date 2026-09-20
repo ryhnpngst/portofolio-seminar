@@ -1,0 +1,89 @@
+---
+import { profile } from "../../data/profile";
+import Container from "../common/Container.astro";
+import Button from "../common/Button.astro";
+import Badge from "../common/Badge.astro";
+import { ArrowRight, Sparkles, BookOpen } from "lucide-astro";
+---
+
+<section class="relative pt-8 md:pt-14 pb-12 md:pb-20 overflow-hidden bg-stone-50 border-b border-stone-200/70">
+  <!-- Subtle background glow -->
+  <div class="absolute -top-24 right-0 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+  <div class="absolute top-1/2 left-0 w-80 h-80 bg-stone-200/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+  <Container>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <!-- Left Column: Copy & CTAs -->
+      <div class="lg:col-span-7 flex flex-col items-start text-left">
+        <!-- Eyebrow & Status -->
+        <div class="inline-flex items-center gap-2 mb-4">
+          <Badge variant="primary" size="sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            PPG CALON GURU
+          </Badge>
+          <span class="text-xs font-semibold uppercase tracking-wider text-stone-500">
+            {profile.field}
+          </span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-stone-900 tracking-tight leading-[1.1] font-display mb-4">
+          {profile.name}
+        </h1>
+
+        <!-- Subtext (Max 20 words as per design taste discipline) -->
+        <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-[54ch] mb-8">
+          {profile.shortBio}
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap items-center gap-3.5">
+          <Button href="/perjalanan" variant="primary" size="md">
+            <span>Jelajahi Perjalanan Saya</span>
+            <ArrowRight class="w-4 h-4 ml-2" />
+          </Button>
+          <Button href="/tentang" variant="secondary" size="md">
+            <span>Tentang Saya</span>
+          </Button>
+        </div>
+
+        <!-- Micro Highlights Strip -->
+        <div class="mt-10 pt-6 border-t border-stone-200/80 w-full flex flex-wrap items-center gap-6 text-xs text-stone-500">
+          <div class="flex items-center gap-2">
+            <BookOpen class="w-4 h-4 text-emerald-600" />
+            <span>Portofolio Digital Akademik</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <Sparkles class="w-4 h-4 text-emerald-600" />
+            <span>Refleksi Berkelanjutan Semester 1 & 2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Editorial Profile Photo -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-none">
+          <!-- Background decorative layer -->
+          <div class="absolute inset-0 bg-emerald-100/60 rounded-[28px] transform rotate-1 scale-[1.02] -z-10 transition-transform duration-300"></div>
+
+          <!-- Main Photo Container -->
+          <div class="relative aspect-[4/5] w-full rounded-[24px] overflow-hidden border border-stone-200/90 shadow-md bg-stone-100">
+            <img
+              src={profile.photo}
+              alt={profile.photoAlt}
+              loading="eager"
+              fetchpriority="high"
+              class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-102"
+            />
+
+            <!-- Subtle bottom gradient tag -->
+            <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-stone-900/80 via-stone-900/30 to-transparent text-white">
+              <p class="text-sm font-semibold tracking-tight font-display">{profile.name}</p>
+              <p class="text-xs text-stone-200">{profile.role} · {profile.field}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

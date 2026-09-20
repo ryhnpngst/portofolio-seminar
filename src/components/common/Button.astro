@@ -1,0 +1,54 @@
+---
+interface Props {
+  href?: string;
+  variant?: "primary" | "secondary" | "text";
+  size?: "sm" | "md" | "lg";
+  class?: string;
+  target?: string;
+  rel?: string;
+  type?: "button" | "submit" | "reset";
+  [key: string]: any;
+}
+
+const {
+  href,
+  variant = "primary",
+  size = "md",
+  class: className = "",
+  target,
+  rel,
+  type = "button",
+  ...rest
+} = Astro.props;
+
+const baseStyles =
+  "inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-emerald-600 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+
+const variantStyles = {
+  primary:
+    "bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm hover:shadow active:bg-emerald-800",
+  secondary:
+    "bg-transparent text-stone-800 border border-stone-300 hover:bg-stone-100 hover:border-stone-400 active:bg-stone-200",
+  text: "bg-transparent text-emerald-700 hover:text-emerald-800 p-0 font-medium hover:underline underline-offset-4",
+};
+
+const sizeStyles = {
+  sm: variant === "text" ? "" : "h-9 px-3.5 text-xs rounded-[8px]",
+  md: variant === "text" ? "" : "min-h-[44px] px-5 text-sm rounded-[10px]",
+  lg: variant === "text" ? "" : "min-h-[48px] px-6 text-base rounded-[10px]",
+};
+
+const Tag = href ? "a" : "button";
+---
+
+<Tag
+  href={href}
+  type={!href ? type : undefined}
+  target={target}
+  rel={target === "_blank" ? "noopener noreferrer" : rel}
+  class={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+  {...rest}
+>
+  <slot />
+</Tag>
+
