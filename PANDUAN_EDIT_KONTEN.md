@@ -1,6 +1,10 @@
-# Panduan Mengubah Konten dan Gambar (Beranda & Tentang Saya)
+# Panduan Mengubah Konten dan Gambar (Beranda, Tentang Saya, & Perjalanan PPG)
 
-Dokumen ini menjadi panduan praktis untuk memudahkan Anda memperbarui foto, gambar, teks, data profil, dan konten lainnya pada **Halaman Beranda (`/`)** dan **Halaman Tentang Saya (`/tentang`)**.
+Dokumen ini menjadi panduan praktis untuk memudahkan Anda memperbarui foto, gambar, teks, data profil, dan konten lainnya pada:
+
+- **Halaman Beranda (`/`)**
+- **Halaman Tentang Saya (`/tentang`)**
+- **Halaman Perjalanan PPG (`/perjalanan`)**
 
 ---
 
@@ -14,16 +18,16 @@ public/images/
 
 Untuk mengganti gambar, Anda cukup menimpa (_overwrite_) file gambar yang ada dengan nama file yang sama, atau memasukkan file baru dan memperbarui _path_ lokasinya di file data.
 
-| Gambar                | Lokasi File Saat Ini                                    | Tempat Ditampilkan                                                       | Rekomendasi Ukuran / Rasio                                        |
-| :-------------------- | :------------------------------------------------------ | :----------------------------------------------------------------------- | :---------------------------------------------------------------- |
-| **Foto Profil Utama** | `public/images/profile/profile.jpg`                     | • Hero Beranda<br>• Hero Tentang Saya<br>• Open Graph (Thumbnail medsos) | Rasio **4:5** atau **3:4** (misal: 1200×1500 px atau 800×1000 px) |
-| **Dokumentasi PPL**   | `public/images/ppl/praktik-mengajar.jpg`                | • Seksi Pengalaman PPL (Beranda)                                         | Rasio **4:3** atau **16:9** (misal: 1200×900 px)                  |
-| **Refleksi 1**        | `public/images/reflections/filosofi-pendidikan.jpg`     | • Kartu Filosofi Pendidikan (Beranda)                                    | Rasio **16:9** (misal: 1280×720 px)                               |
-| **Refleksi 2**        | `public/images/reflections/pemahaman-peserta-didik.jpg` | • Kartu Pemahaman Peserta Didik (Beranda)                                | Rasio **16:9** (misal: 1280×720 px)                               |
-| **Refleksi 3**        | `public/images/reflections/prinsip-pengajaran.jpg`      | • Kartu Prinsip Pengajaran & Asesmen (Beranda)                           | Rasio **16:9** (misal: 1280×720 px)                               |
-| **Karya 1**           | `public/images/works/modul-ajar.jpg`                    | • Kartu Modul Ajar (Beranda)                                             | Rasio **16:9** (misal: 1280×720 px)                               |
-| **Karya 2**           | `public/images/works/lkpd-algoritma.jpg`                | • Kartu LKPD Interaktif (Beranda)                                        | Rasio **16:9** (misal: 1280×720 px)                               |
-| **Karya 3**           | `public/images/works/media-interaktif.jpg`              | • Kartu Media Pembelajaran Web (Beranda)                                 | Rasio **16:9** (misal: 1280×720 px)                               |
+| Gambar                | Lokasi File Saat Ini                                    | Tempat Ditampilkan                                                                                              | Rekomendasi Ukuran / Rasio                                        |
+| :-------------------- | :------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| **Foto Profil Utama** | `public/images/profile/profile.jpg`                     | • Hero Beranda<br>• Hero Tentang Saya<br>• Kartu Refleksi Akhir (Perjalanan)<br>• Open Graph (Thumbnail medsos) | Rasio **4:5** atau **3:4** (misal: 1200×1500 px atau 800×1000 px) |
+| **Dokumentasi PPL**   | `public/images/ppl/praktik-mengajar.jpg`                | • Seksi Pengalaman PPL (Beranda)<br>• Kartu PPL Terbimbing (Perjalanan)                                         | Rasio **4:3** atau **16:9** (misal: 1200×900 px)                  |
+| **Refleksi 1**        | `public/images/reflections/filosofi-pendidikan.jpg`     | • Kartu Filosofi Pendidikan (Beranda)<br>• Kartu Semester 1 (Perjalanan)                                        | Rasio **16:9** (misal: 1280×720 px)                               |
+| **Refleksi 2**        | `public/images/reflections/pemahaman-peserta-didik.jpg` | • Kartu Pemahaman Peserta Didik (Beranda)                                                                       | Rasio **16:9** (misal: 1280×720 px)                               |
+| **Refleksi 3**        | `public/images/reflections/prinsip-pengajaran.jpg`      | • Kartu Prinsip Pengajaran & Asesmen (Beranda)                                                                  | Rasio **16:9** (misal: 1280×720 px)                               |
+| **Karya 1**           | `public/images/works/modul-ajar.jpg`                    | • Kartu Modul Ajar (Beranda)<br>• Kartu PPL Mandiri (Perjalanan)                                                | Rasio **16:9** (misal: 1280×720 px)                               |
+| **Karya 2**           | `public/images/works/lkpd-algoritma.jpg`                | • Kartu LKPD Interaktif (Beranda)                                                                               | Rasio **16:9** (misal: 1280×720 px)                               |
+| **Karya 3**           | `public/images/works/media-interaktif.jpg`              | • Kartu Media Pembelajaran Web (Beranda)<br>• Kartu Semester 2 (Perjalanan)                                     | Rasio **16:9** (misal: 1280×720 px)                               |
 
 > [!TIP]
 > Format gambar yang disarankan adalah **JPG**, **PNG**, atau **WebP**. Pastikan ukuran file gambar dikompresi (idealnya di bawah 300 KB per gambar) agar website dimuat dengan cepat.
@@ -103,17 +107,24 @@ Di file ini Anda dapat mengubah:
 
 ---
 
-### C. Timeline Kronologis Perjalanan PPG
+### C. Timeline & Detail Tahapan Perjalanan PPG
 
 📁 File: **[`src/data/journey.ts`](file:///c:/laragon/www/portofolio-seminar/src/data/journey.ts)**
 
-Di file ini Anda dapat mengubah ringkasan 5 tahapan PPG pada seksi timeline Beranda:
+Di file ini Anda dapat mengubah seluruh data tahapan PPG untuk seksi timeline di Beranda dan **Halaman Perjalanan (`/perjalanan`)**:
 
-- `Semester 1`
-- `PPL Terbimbing`
-- `Semester 2`
-- `PPL Mandiri`
-- `Refleksi Akhir`
+- `stepNumber`: Urutan langkah (1 s.d. 5)
+- `title`: Nama tahapan (`Semester 1`, `PPL Terbimbing`, `Semester 2`, `PPL Mandiri`, `Refleksi Akhir`)
+- `stage`: Subjudul tahapan (misal: "Fondasi Pedagogik & Teori Pembelajaran")
+- `period`: Keterangan waktu (misal: "Semester Ganjil", "PPL I", dll.)
+- `badge`: Label kategori penanda
+- `description`: Deskripsi singkat untuk timeline ringkas di Beranda
+- `fullDescription`: Narasi detail untuk Halaman Perjalanan
+- `keyExperiences`: Poin-poin pengalaman dan aktivitas utama (tampil sebagai checklist)
+- `keyTakeaways`: Teks kutipan _"Pembelajaran Bermakna"_
+- `relatedCourses`: Daftar mata kuliah terkait
+- `image` & `imageAlt`: File gambar dokumentasi yang ditampilkan di dalam kartu
+- `link` & `linkLabel`: Tautan tujuan tombol aksi
 
 ---
 
@@ -150,7 +161,18 @@ Jika Anda ingin mengubah judul bagian (_heading_), teks tombol CTA, atau teks pe
 
 ---
 
-### C. Navigasi Atas & Footer
+### C. Halaman Perjalanan PPG (`/perjalanan`)
+
+| Bagian / Seksi          | File Komponen                                                                                                                                        | Yang Dapat Diubah di File Tersebut                                                                                    |
+| :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| **Hero Perjalanan**     | [`src/components/journey/JourneyHero.astro`](file:///c:/laragon/www/portofolio-seminar/src/components/journey/JourneyHero.astro)                     | Judul utama ("Perjalanan Program PPG..."), kalimat pengantar, label 4 kotak metrik (Fase, Semester, Praktik, Penutup) |
+| **Detail Timeline**     | [`src/components/journey/JourneyTimelineDetail.astro`](file:///c:/laragon/www/portofolio-seminar/src/components/journey/JourneyTimelineDetail.astro) | Judul seksi timeline, tata letak visual kartu, teks pengantar                                                         |
+| **Siklus Perkembangan** | [`src/components/journey/JourneyProgression.astro`](file:///c:/laragon/www/portofolio-seminar/src/components/journey/JourneyProgression.astro)       | Teks 4 tahapan siklus: _01. Mengalami_, _02. Merefleksikan_, _03. Memperbaiki_, _04. Berkembang_                      |
+| **CTA Navigasi**        | [`src/components/journey/JourneyCTA.astro`](file:///c:/laragon/www/portofolio-seminar/src/components/journey/JourneyCTA.astro)                       | Judul ajakan penutup, tombol menuju `/refleksi` dan `/ppl`                                                            |
+
+---
+
+### D. Navigasi Atas & Footer
 
 - **Navbar**: [`src/components/common/Navbar.astro`](file:///c:/laragon/www/portofolio-seminar/src/components/common/Navbar.astro)  
   Untuk mengubah tulisan logo atau tombol "Refleksi Akhir" di sudut kanan atas.

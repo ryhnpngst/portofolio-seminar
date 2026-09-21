@@ -1,0 +1,73 @@
+---
+import Container from "../common/Container.astro";
+import { Eye, BookOpenCheck, Wrench, TrendingUp } from "lucide-astro";
+
+const progressionSteps = [
+  {
+    step: "01",
+    title: "Mengalami",
+    description: "Terjun langsung mengamati dinamika kelas nyata, karakteristik unik peserta didik, dan mempraktikkan skenario pengajaran di sekolah mitra.",
+    icon: Eye,
+  },
+  {
+    step: "02",
+    title: "Merefleksikan",
+    description: "Mengevaluasi secara kritis apa yang berhasil, kendala yang dihadapi, serta keselarasan rancangan ajar dengan respon belajar murid.",
+    icon: BookOpenCheck,
+  },
+  {
+    step: "03",
+    title: "Memperbaiki",
+    description: "Merumuskan strategi perbaikan, menyusun diferensiasi materi, dan menyempurnakan media serta instrumen asesmen pembelajaran.",
+    icon: Wrench,
+  },
+  {
+    step: "04",
+    title: "Berkembang",
+    description: "Membangun kematangan pedagogik berkelanjutan dan meneguhkan kemandirian sebagai guru profesional yang reflektif dan adaptif.",
+    icon: TrendingUp,
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-stone-50 border-b border-stone-200/70">
+  <Container>
+    <div class="max-w-[760px] mx-auto text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-900 font-display mb-3">
+        Siklus Perkembangan Kompetensi
+      </h2>
+      <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
+        Setiap pengalaman belajar dirancang dalam siklus metakognisi berkelanjutan agar membentuk kebiasaan berpikir reflektif sepanjang hayat.
+      </p>
+    </div>
+
+    <!-- 4 Step Progression Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {progressionSteps.map((item) => {
+        const Icon = item.icon;
+        return (
+          <div class="p-6 rounded-[16px] bg-white border border-stone-200/80 flex flex-col justify-between transition-all hover:border-emerald-300 hover:shadow-xs">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60 font-display">
+                  FASE {item.step}
+                </span>
+                <div class="w-9 h-9 rounded-lg bg-stone-100 text-emerald-700 flex items-center justify-center">
+                  <Icon class="w-4 h-4" />
+                </div>
+              </div>
+
+              <h3 class="text-lg font-bold text-stone-900 font-display mb-2">
+                {item.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </Container>
+</section>
+

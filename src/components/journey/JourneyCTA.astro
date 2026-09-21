@@ -1,0 +1,36 @@
+---
+import Container from "../common/Container.astro";
+import Button from "../common/Button.astro";
+import { ArrowRight, BookOpen, School } from "lucide-astro";
+---
+
+<section class="py-16 md:py-24 bg-white">
+  <Container>
+    <div class="relative rounded-[24px] p-8 sm:p-12 md:p-16 bg-stone-50 border border-stone-200 overflow-hidden text-center flex flex-col items-center">
+      <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 mb-6">
+        <BookOpen class="w-6 h-6" />
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-900 font-display mb-4 max-w-[28ch]">
+        Eksplorasi Bukti Pembelajaran & Refleksi Kritis
+      </h2>
+
+      <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-[56ch] mb-8">
+        Setiap mata kuliah dan tahapan praktik menghasilkan catatan refleksi mendalam serta karya nyata yang siap Anda telaah.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <Button href="/refleksi" variant="primary" size="lg">
+          <BookOpen class="w-4 h-4 mr-2" />
+          <span>Buka Refleksi Mata Kuliah</span>
+          <ArrowRight class="w-4 h-4 ml-2" />
+        </Button>
+        <Button href="/ppl" variant="secondary" size="lg">
+          <School class="w-4 h-4 mr-2" />
+          <span>Lihat Dokumentasi PPL</span>
+        </Button>
+      </div>
+    </div>
+  </Container>
+</section>
+

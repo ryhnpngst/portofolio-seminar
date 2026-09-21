@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import JourneyHero from "../components/journey/JourneyHero.astro";
+import JourneyTimelineDetail from "../components/journey/JourneyTimelineDetail.astro";
+import JourneyProgression from "../components/journey/JourneyProgression.astro";
+import JourneyCTA from "../components/journey/JourneyCTA.astro";
+import { profile } from "../data/profile";
+
+const pageTitle = `Perjalanan PPG | ${profile.name}`;
+const pageDescription = `Kronologi perjalanan pembelajaran dan perkembangan kompetensi ${profile.name} selama mengikuti program ${profile.program} ${profile.field}.`;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <JourneyHero />
+  <JourneyTimelineDetail />
+  <JourneyProgression />
+  <JourneyCTA />
+</Layout>
+
