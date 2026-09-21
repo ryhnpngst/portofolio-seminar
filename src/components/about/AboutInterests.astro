@@ -1,0 +1,50 @@
+---
+import { profile } from "../../data/profile";
+import Container from "../common/Container.astro";
+import { Cpu, Layers, Code, FileCheck } from "lucide-astro";
+
+const iconMap = {
+  Cpu,
+  Layers,
+  Code,
+  FileCheck,
+};
+---
+
+<section class="py-16 md:py-24 bg-stone-50 border-b border-stone-200/70">
+  <Container>
+    <div class="max-w-[760px] mx-auto text-center mb-12">
+      <span class="text-xs font-semibold tracking-wider text-emerald-700 uppercase mb-2 block">
+        FOKUS KEAHLIAN
+      </span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-900 font-display mb-3">
+        Minat dalam Pendidikan & Teknologi
+      </h2>
+      <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
+        Bidang spesifik yang menjadi fokus pendalaman akademik, eksplorasi teknologi instruksional, dan implementasi kurikulum.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {profile.interests.map((interest) => {
+        const IconComponent = iconMap[interest.iconName as keyof typeof iconMap] || Code;
+        return (
+          <div class="p-6 rounded-[16px] bg-white border border-stone-200/80 flex flex-col justify-between transition-all duration-200 hover:border-emerald-300 hover:shadow-xs">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4">
+                <IconComponent class="w-5 h-5" />
+              </div>
+              <h3 class="text-base font-bold text-stone-900 font-display mb-2">
+                {interest.title}
+              </h3>
+              <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                {interest.description}
+              </p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </Container>
+</section>
+

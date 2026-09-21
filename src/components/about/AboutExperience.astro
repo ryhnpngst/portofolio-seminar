@@ -1,0 +1,102 @@
+---
+import { profile } from "../../data/profile";
+import Container from "../common/Container.astro";
+import { GraduationCap, Briefcase, Calendar, CheckCircle2 } from "lucide-astro";
+---
+
+<section class="py-16 md:py-24 bg-white border-b border-stone-200/70">
+  <Container>
+    <div class="max-w-[760px] mx-auto text-center mb-14">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-stone-900 font-display mb-3">
+        Pendidikan & Pengalaman Mengajar
+      </h2>
+      <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
+        Jejak akademik dan pengalaman nyata dalam memfasilitasi pembelajaran, merancang kurikulum, dan mengelola kelas di sekolah.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      <!-- Left Column: Education (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col">
+        <div class="flex items-center gap-2.5 mb-6 pb-3 border-b border-stone-200">
+          <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <GraduationCap class="w-4 h-4" />
+          </div>
+          <h3 class="text-lg font-bold text-stone-900 font-display">
+            Riwayat Pendidikan
+          </h3>
+        </div>
+
+        <div class="space-y-6">
+          {profile.education.map((edu) => (
+            <div class="p-6 rounded-[16px] bg-stone-50 border border-stone-200/80 transition-all hover:border-emerald-300">
+              <div class="flex items-center justify-between text-xs text-emerald-700 font-semibold mb-2">
+                <span class="inline-flex items-center gap-1">
+                  <Calendar class="w-3.5 h-3.5" />
+                  {edu.period}
+                </span>
+                <span class="bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                  Formal
+                </span>
+              </div>
+              <h4 class="text-base font-bold text-stone-900 font-display mb-1">
+                {edu.degree}
+              </h4>
+              <p class="text-xs font-semibold text-stone-600 mb-3">
+                {edu.institution}
+              </p>
+              <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                {edu.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right Column: Teaching Experience (7 cols) -->
+      <div class="lg:col-span-7 flex flex-col">
+        <div class="flex items-center gap-2.5 mb-6 pb-3 border-b border-stone-200">
+          <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <Briefcase class="w-4 h-4" />
+          </div>
+          <h3 class="text-lg font-bold text-stone-900 font-display">
+            Pengalaman Mengajar & PPL
+          </h3>
+        </div>
+
+        <div class="space-y-6">
+          {profile.teachingExperience.map((exp) => (
+            <div class="p-6 rounded-[16px] bg-stone-50 border border-stone-200/80 transition-all hover:border-emerald-300">
+              <div class="flex items-center justify-between text-xs text-emerald-700 font-semibold mb-2">
+                <span class="inline-flex items-center gap-1">
+                  <Calendar class="w-3.5 h-3.5" />
+                  {exp.period}
+                </span>
+                <span class="text-stone-500 font-medium">
+                  {exp.institution}
+                </span>
+              </div>
+              <h4 class="text-base font-bold text-stone-900 font-display mb-2">
+                {exp.role}
+              </h4>
+              <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-4">
+                {exp.description}
+              </p>
+
+              <!-- Highlights list -->
+              <ul class="space-y-2 pt-3 border-t border-stone-200/60">
+                {exp.highlights.map((item) => (
+                  <li class="flex items-start gap-2 text-xs text-stone-600 leading-relaxed">
+                    <CheckCircle2 class="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+

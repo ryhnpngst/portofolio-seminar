@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutHero from "../components/about/AboutHero.astro";
+import AboutStory from "../components/about/AboutStory.astro";
+import AboutPhilosophy from "../components/about/AboutPhilosophy.astro";
+import AboutExperience from "../components/about/AboutExperience.astro";
+import AboutInterests from "../components/about/AboutInterests.astro";
+import AboutCTA from "../components/about/AboutCTA.astro";
+import { profile } from "../data/profile";
+
+const pageTitle = `Tentang Saya | ${profile.name}`;
+const pageDescription = `Profil profesional, latar belakang pendidikan, perjalanan menjadi guru, dan empat pilar filosofi mengajar ${profile.name} - ${profile.role} ${profile.field}.`;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <AboutHero />
+  <AboutStory />
+  <AboutPhilosophy />
+  <AboutExperience />
+  <AboutInterests />
+  <AboutCTA />
+</Layout>
+
