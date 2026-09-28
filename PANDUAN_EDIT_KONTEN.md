@@ -208,7 +208,7 @@ Jika Anda ingin mengubah judul bagian (_heading_), teks tombol CTA, atau teks pe
 ### E. Navigasi Atas & Footer
 
 - **Navbar**: [`src/components/common/Navbar.astro`](file:///c:/laragon/www/portofolio-seminar/src/components/common/Navbar.astro)  
-  Untuk mengubah tulisan logo atau tombol "Refleksi Akhir" di sudut kanan atas.
+  Untuk mengatur logo institusi (UNY & PPG di `public/images/logos/`) atau tombol "Refleksi Akhir" di sudut kanan atas.
 - **Footer**: [`src/components/common/Footer.astro`](file:///c:/laragon/www/portofolio-seminar/src/components/common/Footer.astro)  
   Untuk mengubah teks deskripsi footer, informasi instansi PPG, atau teks hak cipta.
 - **Metadata SEO Global**: [`src/layouts/Layout.astro`](file:///c:/laragon/www/portofolio-seminar/src/layouts/Layout.astro)  

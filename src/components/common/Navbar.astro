@@ -1,6 +1,5 @@
 ---
 import { navItems } from "../../data/navigation";
-import { profile } from "../../data/profile";
 import { Menu, X, ArrowRight } from "lucide-astro";
 
 const currentPath = Astro.url.pathname;
@@ -17,13 +16,23 @@ const isActive = (href: string) => {
   class="sticky top-0 z-50 w-full border-b border-stone-200/80 bg-stone-50/90 backdrop-blur-md transition-all duration-200"
 >
   <div class="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 h-16 md:h-[72px] flex items-center justify-between">
-    <!-- Logo -->
+    <!-- Combined Logos: UNY & PPG -->
     <a
       href="/"
-      class="group flex items-center gap-1.5 text-xl font-bold text-stone-900 tracking-tight font-display transition-colors hover:text-emerald-700 focus-visible:rounded"
+      class="group flex items-center gap-2.5 sm:gap-3 py-1 transition-all duration-200 hover:opacity-90 focus-visible:outline-2 focus-visible:outline-emerald-600 focus-visible:rounded"
+      aria-label="Beranda Portofolio PPG Universitas Negeri Yogyakarta"
     >
-      <span>{profile.shortName}</span>
-      <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 transition-transform group-hover:scale-125"></span>
+      <img
+        src="/images/logos/logo-uny.png"
+        alt="Logo Universitas Negeri Yogyakarta"
+        class="h-8 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+      />
+      <span class="h-5 sm:h-6 w-px bg-stone-300/80" aria-hidden="true"></span>
+      <img
+        src="/images/logos/logo-ppg.png"
+        alt="Logo Pendidikan Profesi Guru"
+        class="h-7 sm:h-8 md:h-9 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+      />
     </a>
 
     <!-- Desktop Navigation -->
