@@ -1,0 +1,27 @@
+---
+title: "Praktik Pengalaman Lapangan I (PPL Terbimbing)"
+shortTitle: "PPL Terbimbing"
+semester: 1
+description: "Refleksi orientasi kultur sekolah, observasi manajemen kelas, dan asistensi mengajar terbimbing di sekolah mitra."
+order: 6
+published: true
+featured: false
+image: "/images/ppl/praktik-mengajar.jpg"
+imageAlt: "Praktik Pengalaman Lapangan I (PPL Terbimbing)"
+tags:
+  - "PPL I"
+  - "Observasi"
+  - "Asistensi Mengajar"
+  - "Sekolah Mitra"
+---
+
+|  |  |  |
+| --- | --- | --- |
+| **Indikator** | **Pertanyaan** | **Uraian Jawaban** |
+| Refleksi pengalaman belajar dalam konteks sebagai calon guru (*connection, challenge, concept, change*) | 1. Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru? | 1. PPL Terbimbing memberikan pengalaman nyata kepada saya untuk memahami bahwa menjadi guru tidak hanya berkaitan dengan mengajar di kelas, tetapi juga memahami manajemen sekolah, lingkungan belajar, karakteristik murid, serta bekerja sama dengan warga sekolah. 2. Pengalaman PPL Terbimbing semakin memperkuat pemahaman saya bahwa guru perlu mampu merancang pembelajaran yang berpusat pada murid, mengelola kelas, menyesuaikan strategi dengan kondisi peserta didik, serta melakukan refleksi setelah pembelajaran. |
+| 1. Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini? | 1. Sebelum melaksanakan PPL, saya lebih banyak memahami pembelajaran dari sudut pandang teori dan perencanaan, sedangkan melalui PPL Terbimbing saya dapat melihat secara langsung berbagai karakteristik murid dan dinamika yang terjadi selama proses pembelajaran. 2. Saya menyadari bahwa rancangan pembelajaran yang sudah dibuat tidak selalu dapat diterapkan secara kaku karena guru perlu menyesuaikan waktu, kondisi kelas, respons murid, serta situasi yang muncul selama pembelajaran. |
+| 1. Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru? | 1. Saya mempelajari bahwa guru perlu memahami sekolah dan lingkungan belajar secara menyeluruh sebelum melaksanakan pembelajaran agar strategi yang digunakan sesuai dengan kondisi nyata di lapangan. 2. Saya memahami pentingnya melakukan observasi terhadap karakteristik murid, interaksi di kelas, lingkungan belajar, serta proses pembelajaran sebagai dasar untuk merancang pembelajaran yang lebih tepat. 3. Melalui pembelajaran terbimbing, saya belajar bahwa guru perlu mampu mengelola kelas, menyampaikan materi dengan jelas, memberikan kesempatan kepada murid untuk aktif, serta menggunakan metode dan media yang sesuai dengan karakteristik materi. |
+| 1. Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini? | 1. Setelah mengikuti PPL Terbimbing, saya ingin lebih percaya diri dalam melaksanakan pembelajaran sekaligus tetap terbuka terhadap kritik dan saran dari guru pamong maupun pihak lain yang memberikan masukan. 2. Saya ingin meningkatkan kemampuan dalam mengelola waktu pembelajaran agar kegiatan teori, diskusi, demonstrasi, dan praktik dapat terlaksana secara lebih efektif sesuai dengan alokasi waktu yang tersedia. 3. Saya ingin lebih memperhatikan karakteristik dan kebutuhan setiap murid sehingga pembelajaran yang saya rancang tidak hanya berorientasi pada penyelesaian materi, tetapi juga memberikan pengalaman belajar yang bermakna. |
+| Analisis artefak pembelajaran | 1. Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini? | 1. LK 1 Laporan Hasil Orientasi dan Observasi Manajemen Sekolah dapat menjadi artefak yang menunjukkan proses awal saya dalam memahami kondisi sekolah, manajemen sekolah, serta lingkungan tempat saya melaksanakan PPL Terbimbing. 2. LK 4 Refleksi Pembelajaran Praktik Terbimbing Siklus 2 dapat menjadi artefak yang menunjukkan pengalaman saya dalam melaksanakan pembelajaran secara langsung, mengevaluasi proses yang telah dilakukan, serta merencanakan perbaikan berdasarkan hasil refleksi. 3. Kedua artefak tersebut dapat menggambarkan perkembangan saya dari tahap memahami lingkungan sekolah hingga mampu melakukan praktik pembelajaran dan merefleksikan pengalaman mengajar sebagai calon guru. |
+| 1. Mengapa artefak tersebut yang saya pilih? | 1. Saya memilih LK 1 karena kegiatan orientasi dan observasi merupakan tahap awal yang membantu saya memahami kondisi nyata sekolah sebelum terlibat secara langsung dalam proses pembelajaran. 2. Saya memilih LK 4 Siklus 2 karena artefak tersebut menunjukkan pengalaman saya dalam menerapkan pembelajaran secara langsung sekaligus melakukan refleksi terhadap proses dan hasil pembelajaran. 3. Kedua artefak tersebut mewakili dua pengalaman penting dalam PPL Terbimbing, yaitu memahami konteks sekolah dan mengembangkan kemampuan praktik mengajar. |
+| 1. Bagian mana dari artefak ini yang mendukung hasil refleksi saya? | 1. Pada LK 1, bagian hasil observasi mengenai kondisi dan manajemen sekolah mendukung pemahaman saya bahwa guru perlu memahami lingkungan sekolah dan karakteristik tempat mengajar sebelum merancang serta melaksanakan pembelajaran. 2. Pada LK 4 Siklus 2, bagian refleksi mengenai pelaksanaan pembelajaran membantu saya mengidentifikasi hal-hal yang sudah berjalan baik maupun kendala yang masih perlu diperbaiki dalam proses mengajar. 3. Kedua artefak tersebut menjadi bukti bahwa PPL Terbimbing tidak hanya memberikan pengalaman mengajar, tetapi juga melatih saya untuk mengamati, melaksanakan, mengevaluasi, dan memperbaiki pembelajaran secara berkelanjutan. |

@@ -1,0 +1,27 @@
+---
+title: "Pembelajaran Mendalam dan Asesmen Dasar SMK"
+shortTitle: "Pembelajaran Mendalam & Asesmen Dasar"
+semester: 1
+description: "Penerapan pendekatan Understanding by Design (UbD) dan perancangan asesmen autentik untuk kejuruan Informatika/SMK."
+order: 5
+published: true
+featured: true
+image: "/images/reflections/prinsip-pengajaran.jpg"
+imageAlt: "Pembelajaran Mendalam dan Asesmen Dasar SMK"
+tags:
+  - "Understanding by Design"
+  - "Asesmen Autentik"
+  - "SMK"
+  - "Capaian Pembelajaran"
+---
+
+|  |  |  |
+| --- | --- | --- |
+| **Indikator** | **Pertanyaan** | **Uraian Jawaban** |
+| Refleksi pengalaman belajar dalam konteks sebagai calon guru (*connection, challenge, concept, change*) | 1. Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru? | 1. Materi PMA Dasar berkaitan erat dengan peran saya sebagai calon guru karena memberikan pemahaman bahwa pembelajaran di SMK perlu dirancang secara mendalam, kontekstual, dan relevan dengan kebutuhan murid serta tuntutan dunia kerja. 2. Melalui pembelajaran mendalam, saya memahami bahwa guru tidak hanya bertugas menyampaikan materi, tetapi perlu menciptakan pengalaman belajar yang berkesadaran, bermakna, dan menggembirakan agar murid mampu memahami serta menerapkan pengetahuan dalam situasi nyata. 3. Materi mengenai perencanaan, pelaksanaan, dan asesmen membantu saya memahami pentingnya menciptakan keselarasan antara tujuan pembelajaran, aktivitas pembelajaran, dan asesmen sehingga seluruh proses pembelajaran memiliki arah yang jelas. |
+| 1. Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini? | 1. Sebelumnya saya lebih banyak memandang pembelajaran dari sisi kegiatan yang harus dilakukan guru dan murid, sedangkan materi PMA Dasar membuat saya memahami bahwa setiap kegiatan perlu dirancang berdasarkan tujuan, kebutuhan murid, konteks nyata, dan bukti asesmen yang ingin diperoleh. 2. Saya sebelumnya cenderung melihat asesmen sebagai kegiatan untuk mengetahui hasil belajar setelah pembelajaran, sedangkan materi ini memberikan pemahaman bahwa asesmen juga dapat dilakukan sejak awal dan selama proses pembelajaran untuk mengetahui kebutuhan serta perkembangan murid. 3. Saya juga memperoleh pemahaman yang lebih mendalam mengenai pentingnya DUP (Desain Universal untuk Pembelajaran), yaitu menyediakan beragam cara representasi, keterlibatan, dan ekspresi agar pembelajaran dapat mengakomodasi keragaman murid. 4. Saya menyadari bahwa pembelajaran yang mendalam tidak cukup hanya dengan menggunakan metode yang menarik, tetapi perlu memberikan kesempatan kepada murid untuk menganalisis, menerapkan, memecahkan masalah, berkolaborasi, dan melakukan refleksi. |
+| 1. Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru? | 1. Konsep utama yang saya pelajari adalah pembelajaran mendalam, yang menempatkan murid sebagai subjek pembelajaran melalui pengalaman belajar yang relevan, kontekstual, dan mendorong pemahaman yang lebih bermakna. 2. Saya memahami pentingnya merancang pembelajaran secara sistematis mulai dari analisis kasus, asesmen awal, penentuan tujuan, pemilihan aktivitas, pelaksanaan pembelajaran, asesmen, hingga evaluasi dan tindak lanjut. 3. Saya mempelajari prinsip DUP sebagai kerangka untuk merancang pembelajaran yang fleksibel dan inklusif dengan memberikan berbagai pilihan dalam menerima informasi, terlibat dalam pembelajaran, serta menunjukkan pemahaman. |
+| 1. Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini? | 1. Setelah mempelajari PMA Dasar, saya ingin lebih teliti dalam merancang pembelajaran dengan memastikan adanya keselarasan antara tujuan pembelajaran, kegiatan yang dilakukan murid, dan asesmen yang digunakan. 2. Saya ingin melakukan asesmen awal sebelum pembelajaran sehingga saya dapat mengetahui kemampuan, kebutuhan, dan karakteristik murid sebagai dasar dalam menentukan strategi pembelajaran. 3. Saya ingin menerapkan prinsip DUP dengan menyediakan alternatif cara belajar dan menunjukkan hasil belajar sehingga murid dengan karakteristik dan kemampuan yang berbeda tetap memiliki kesempatan untuk berkembang. |
+| Analisis artefak pembelajaran | 1. Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini? | Rancangan pembelajaran dan asesmen pada Topik 3 serta tugas implementasi menggunakan kerangka DUP pada Topik 4 dapat menjadi bukti penerapan konsep pembelajaran mendalam dalam merancang pembelajaran yang relevan, fleksibel, dan inklusif. |
+| 1. Mengapa artefak tersebut yang saya pilih? | 1. Artefak tersebut memperlihatkan bahwa saya tidak hanya memahami teori secara konseptual, tetapi juga belajar menerapkannya dalam rancangan pembelajaran yang sesuai dengan konteks SMK. 2. Tugas yang berkaitan dengan DUP saya pilih karena menunjukkan perkembangan pemahaman saya mengenai pentingnya menciptakan pembelajaran yang dapat mengakomodasi keragaman kebutuhan dan kemampuan murid. |
+| 1. Bagian mana dari artefak ini yang mendukung hasil refleksi saya? | Bagian asesmen awal dan instrumen asesmen mendukung pemahaman saya bahwa guru perlu mengetahui kondisi awal murid agar pembelajaran dapat dirancang sesuai dengan kemampuan dan kebutuhan mereka. Pendekatan ini juga sejalan dengan prinsip DUP yang menekankan pentingnya menyediakan berbagai cara representasi, keterlibatan, dan ekspresi. |

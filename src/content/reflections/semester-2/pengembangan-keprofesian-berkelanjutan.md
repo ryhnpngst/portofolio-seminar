@@ -1,0 +1,27 @@
+---
+title: "Pengembangan Keprofesian Berkelanjutan"
+shortTitle: "Pengembangan Keprofesian"
+semester: 2
+description: "Merancang peta jalan pengembangan diri guru profesional melalui publikasi ilmiah, komunitas belajar, dan refleksi berkelanjutan."
+order: 9
+published: true
+featured: false
+image: "/images/reflections/prinsip-pengajaran.jpg"
+imageAlt: "Pengembangan Keprofesian Berkelanjutan"
+tags:
+  - "PKB"
+  - "Guru Profesional"
+  - "Komunitas Praktisi"
+  - "Rencana Pengembangan"
+---
+
+|  |  |  |
+| --- | --- | --- |
+| **Indikator** | **Pertanyaan** | **Uraian Jawaban** |
+| Refleksi pengalaman belajar dalam konteks sebagai calon guru (*connection, challenge, concept, change*) | 1. Apa keterkaitan materi perkuliahan dengan peran saya sebagai calon guru? | Materi Pengembangan Keprofesian Berkelanjutan (PKB) berkaitan erat dengan peran saya sebagai calon guru karena memberikan pemahaman bahwa profesionalisme guru tidak berhenti setelah menyelesaikan pendidikan, tetapi harus terus dikembangkan melalui proses belajar, refleksi, evaluasi, dan peningkatan kompetensi secara berkelanjutan. |
+| 1. Apa saja materi perkuliahan yang berbeda dari praktik yang saya lakukan selama ini? | 1. Sebelumnya saya memandang pengembangan kompetensi guru terutama dilakukan melalui kegiatan perkuliahan, pelatihan, atau pengalaman mengajar, sedangkan materi PKB memberikan pemahaman bahwa pengembangan profesional perlu dilakukan secara terencana, berkelanjutan, dan berdasarkan kebutuhan kompetensi guru. 2. Materi publikasi ilmiah dan karya tulis ilmiah membuat saya menyadari bahwa pengalaman dan permasalahan yang ditemukan selama mengajar dapat dikembangkan menjadi tulisan atau penelitian yang bermanfaat bagi pengembangan pembelajaran. |
+| 1. Apa saja konsep utama dan penting yang telah saya pelajari sebagai calon guru? | 1. Konsep utama yang saya pelajari adalah Pengembangan Keprofesian Berkelanjutan, yaitu upaya guru untuk terus meningkatkan kompetensi dan kualitas profesionalnya melalui proses pengembangan diri, publikasi ilmiah, karya inovatif, serta kegiatan lain yang relevan. 2. Saya memahami pentingnya karya inovatif sebagai bentuk kreativitas guru dalam menciptakan atau mengembangkan sesuatu yang dapat meningkatkan kualitas pembelajaran dan memberikan manfaat bagi murid. |
+| 1. Apa saja perubahan yang ingin saya lakukan setelah mendapatkan materi perkuliahan ini? | 1. Setelah mempelajari materi PKB, saya ingin membangun kebiasaan untuk terus mengembangkan kompetensi diri dan tidak merasa cukup hanya dengan kemampuan yang telah saya miliki saat ini. 2. Saya ingin lebih aktif mendokumentasikan pengalaman mengajar, permasalahan pembelajaran, dan hasil refleksi agar dapat dikembangkan menjadi bahan penelitian, karya tulis, maupun inovasi pembelajaran. 3. Saya ingin menghasilkan karya inovatif yang sederhana, relevan, dan sesuai dengan kebutuhan pembelajaran, termasuk pengembangan media pembelajaran yang dapat membantu murid memahami materi teori maupun praktik. |
+| Analisis artefak pembelajaran | 1. Mana saja artefak pembelajaran yang dapat saya jadikan bukti dukung hasil refleksi pengalaman belajar ini? | 1. Tugas Penilaian Kinerja Guru dapat menjadi bukti bahwa saya telah memahami pentingnya mengevaluasi kompetensi dan kinerja guru sebagai bagian dari upaya meningkatkan profesionalisme. 2. Tugas Karya Tulis Ilmiah/Penelitian dapat menjadi bukti kemampuan saya dalam memahami proses pengkajian masalah pendidikan secara sistematis dan mengembangkan hasil kajian menjadi karya yang dapat dipertanggungjawabkan secara akademik. 3. Tugas Karya Inovatif dapat menjadi bukti bahwa saya telah mulai mengembangkan kemampuan untuk menghasilkan gagasan atau produk yang kreatif dan inovatif sebagai solusi terhadap kebutuhan pembelajaran. |
+| 1. Mengapa artefak tersebut yang saya pilih? | 1. Saya memilih tugas Penilaian Kinerja Guru karena artefak tersebut menunjukkan pemahaman saya bahwa seorang guru perlu melakukan evaluasi terhadap kompetensi dan kinerjanya sebagai dasar untuk menentukan pengembangan diri. 2. Saya memilih tugas Karya Tulis Ilmiah/Penelitian karena tugas tersebut menunjukkan proses saya dalam belajar mengidentifikasi masalah, menyusun gagasan secara sistematis, serta menggunakan pendekatan ilmiah untuk mencari solusi terhadap permasalahan pembelajaran. 3. Saya memilih tugas Karya Inovatif karena artefak tersebut paling menggambarkan upaya saya dalam menerapkan kreativitas dan menghasilkan sesuatu yang dapat digunakan untuk meningkatkan kualitas pembelajaran. |
+| 1. Bagian mana dari artefak ini yang mendukung hasil refleksi saya? | 1. Pada tugas Penilaian Kinerja Guru, bagian analisis atau evaluasi kompetensi mendukung pemahaman saya bahwa guru perlu mengetahui kekuatan dan aspek yang masih harus dikembangkan agar peningkatan profesional dapat dilakukan secara terarah. 2. Pada tugas Karya Tulis Ilmiah/Penelitian, bagian identifikasi masalah, rumusan masalah, metode, dan pembahasan mendukung pemahaman saya bahwa permasalahan pembelajaran dapat dikaji secara sistematis dan tidak hanya berdasarkan asumsi pribadi. 3. Pada tugas Karya Inovatif, bagian ide, proses pengembangan, dan manfaat karya mendukung perubahan yang ingin saya lakukan untuk menjadi guru yang mampu menciptakan pembelajaran yang lebih menarik, relevan, dan sesuai dengan kebutuhan murid. |

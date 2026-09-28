@@ -1,0 +1,107 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/common/Container.astro";
+import Badge from "../../components/common/Badge.astro";
+import ReflectionCard from "../../components/reflection/ReflectionCard.astro";
+import ReflectionFilter from "../../components/reflection/ReflectionFilter.astro";
+import { getCollection } from "astro:content";
+import { profile } from "../../data/profile";
+import { BookOpen, Sparkles, Filter } from "lucide-astro";
+
+// Fetch all published reflections from content collection
+const allReflections = await getCollection("reflections", ({ data }) => data.published);
+
+// Sort reflections: Semester 1 first, then by order
+const sortedReflections = allReflections.sort((a, b) => {
+  if (a.data.semester !== b.data.semester) {
+    return a.data.semester - b.data.semester;
+  }
+  return a.data.order - b.data.order;
+});
+
+const totalCount = sortedReflections.length;
+const semester1Count = sortedReflections.filter((r) => r.data.semester === 1).length;
+const semester2Count = sortedReflections.filter((r) => r.data.semester === 2).length;
+
+const pageTitle = `Refleksi Pembelajaran Mata Kuliah | ${profile.name}`;
+const pageDescription = `Kumpulan refleksi kritis terhadap 11 mata kuliah Semester 1 dan Semester 2 program ${profile.program} ${profile.field}.`;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="pt-8 md:pt-14 pb-16 md:pb-24 bg-stone-50">
+    <Container>
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-stone-500 mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-emerald-700 transition-colors">Beranda</a>
+        <span>/</span>
+        <span class="text-stone-800 font-medium">Refleksi</span>
+      </nav>
+
+      <!-- Page Header -->
+      <div class="max-w-[840px] mb-12">
+        <div class="inline-flex items-center gap-2 mb-3">
+          <Badge variant="primary" size="sm">
+            DOKUMENTASI AKADEMIK
+          </Badge>
+          <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider">
+            {profile.field}
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-[1.15] font-display mb-4">
+          Refleksi Pembelajaran Mata Kuliah
+        </h1>
+
+        <p class="text-base sm:text-lg text-stone-600 leading-relaxed mb-6">
+          Dokumentasi mendalam terhadap perjalanan belajar, analisis pengalaman, tantangan instruksional, serta perubahan perspektif pedagogik dari seluruh mata kuliah Semester 1 dan Semester 2 PPG Calon Guru.
+        </p>
+
+        <!-- Key stats row -->
+        <div class="flex flex-wrap items-center gap-6 pt-6 border-t border-stone-200/80 text-xs sm:text-sm text-stone-600">
+          <div class="flex items-center gap-2">
+            <BookOpen class="w-4 h-4 text-emerald-600" />
+            <span><strong>{totalCount}</strong> Mata Kuliah Terdokumentasi</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <Sparkles class="w-4 h-4 text-emerald-600" />
+            <span>Model Refleksi 4C & Analisis Artefak</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Controls Bar -->
+      <div class="mb-10 pb-6 border-b border-stone-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-2 text-xs font-semibold text-stone-500 uppercase tracking-wider">
+          <Filter class="w-4 h-4 text-stone-400" />
+          <span>Saring Berdasarkan:</span>
+        </div>
+        <ReflectionFilter
+          totalCount={totalCount}
+          semester1Count={semester1Count}
+          semester2Count={semester2Count}
+        />
+      </div>
+
+      <!-- Reflections Card Grid -->
+      <div id="reflection-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {sortedReflections.map((entry) => {
+          const slug = entry.id.split("/").pop() || entry.id;
+          return (
+            <ReflectionCard
+              reflection={{
+                title: entry.data.title,
+                semester: entry.data.semester,
+                description: entry.data.description,
+                image: entry.data.image,
+                imageAlt: entry.data.imageAlt,
+                slug,
+                tags: entry.data.tags,
+              }}
+            />
+          );
+        })}
+      </div>
+    </Container>
+  </div>
+</Layout>
+

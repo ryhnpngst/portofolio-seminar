@@ -1,0 +1,97 @@
+---
+interface Props {
+  totalCount: number;
+  semester1Count: number;
+  semester2Count: number;
+  class?: string;
+}
+
+const {
+  totalCount,
+  semester1Count,
+  semester2Count,
+  class: className = "",
+} = Astro.props;
+---
+
+<div class={`flex flex-wrap items-center gap-2 sm:gap-3 ${className}`}>
+  <button
+    type="button"
+    data-filter="all"
+    class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-emerald-600 text-white shadow-xs focus-visible:outline-2 focus-visible:outline-emerald-600"
+  >
+    <span>Semua Refleksi</span>
+    <span class="ml-1.5 px-2 py-0.5 rounded-full text-xs bg-emerald-700/80 text-emerald-100">
+      {totalCount}
+    </span>
+  </button>
+
+  <button
+    type="button"
+    data-filter="1"
+    class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-white text-stone-700 border border-stone-200 hover:bg-stone-50 hover:border-stone-300 focus-visible:outline-2 focus-visible:outline-emerald-600"
+  >
+    <span>Semester 1</span>
+    <span class="ml-1.5 px-2 py-0.5 rounded-full text-xs bg-stone-100 text-stone-600">
+      {semester1Count}
+    </span>
+  </button>
+
+  <button
+    type="button"
+    data-filter="2"
+    class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-white text-stone-700 border border-stone-200 hover:bg-stone-50 hover:border-stone-300 focus-visible:outline-2 focus-visible:outline-emerald-600"
+  >
+    <span>Semester 2</span>
+    <span class="ml-1.5 px-2 py-0.5 rounded-full text-xs bg-stone-100 text-stone-600">
+      {semester2Count}
+    </span>
+  </button>
+</div>
+
+<script>
+  function setupReflectionFilter() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>(".filter-btn");
+    const cards = document.querySelectorAll<HTMLElement>(".reflection-card");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+
+        // Update active button state
+        buttons.forEach((b) => {
+          b.classList.remove("active", "bg-emerald-600", "text-white", "shadow-xs");
+          b.classList.add("bg-white", "text-stone-700", "border", "border-stone-200");
+          const badge = b.querySelector("span:last-child");
+          if (badge) {
+            badge.className = "ml-1.5 px-2 py-0.5 rounded-full text-xs bg-stone-100 text-stone-600";
+          }
+        });
+
+        btn.classList.add("active", "bg-emerald-600", "text-white", "shadow-xs");
+        btn.classList.remove("bg-white", "text-stone-700", "border", "border-stone-200");
+        const activeBadge = btn.querySelector("span:last-child");
+        if (activeBadge) {
+          activeBadge.className = "ml-1.5 px-2 py-0.5 rounded-full text-xs bg-emerald-700/80 text-emerald-100";
+        }
+
+        // Filter cards
+        cards.forEach((card) => {
+          const sem = card.getAttribute("data-semester");
+          if (filter === "all" || sem === filter) {
+            card.classList.remove("hidden");
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      });
+    });
+  }
+
+  // Run on page load
+  setupReflectionFilter();
+  document.addEventListener("astro:page-load", setupReflectionFilter);
+</script>
+
