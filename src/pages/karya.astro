@@ -1,0 +1,555 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/common/Container.astro";
+import Button from "../components/common/Button.astro";
+import { profile } from "../data/profile";
+import {
+  Code2,
+  Terminal,
+  Cpu,
+  Eye,
+  CheckCircle2,
+  Users,
+  Play,
+  Save,
+  FolderKanban,
+  FileCheck,
+  ShieldCheck,
+  Sparkles,
+  ArrowRight,
+  Image as ImageIcon,
+  Compass,
+  AlertCircle,
+  Laptop,
+  ZoomIn,
+  ExternalLink,
+  X,
+} from "lucide-astro";
+
+const pageTitle = `Karya Inovasi: CodeMonitor | ${profile.name}`;
+const pageDescription = `CodeMonitor: Platform Praktik dan Monitoring Pemrograman Berbasis Web untuk mendukung pembelajaran Informatika di SMK oleh ${profile.name}.`;
+
+const heroImage = {
+  src: "/images/code-monitor/hero.png",
+  alt: "Tampilan Antarmuka Utama Platform CodeMonitor",
+  folder: "public/images/code-monitor/hero.png",
+};
+
+const featureImages = [
+  {
+    number: "01",
+    tag: "Monitoring Kelas Terpusat",
+    title: "Dashboard Monitoring Guru",
+    description:
+      "Pemantauan status pengerjaan seluruh siswa dalam satu kelas secara terpusat dan real-time. Guru dapat langsung mendeteksi siswa yang aktif, idle, belum mulai, atau sudah selesai tanpa perlu berkeliling memeriksa satu per satu.",
+    src: "/images/code-monitor/fitur-1.png",
+    alt: "Dashboard Monitoring Guru untuk Pemantauan Praktik Kelas",
+    folder: "public/images/code-monitor/fitur-1.png",
+  },
+  {
+    number: "02",
+    tag: "Ruang Praktik Siswa",
+    title: "Editor Kode & Eksekusi Python Langsung",
+    description:
+      "Lingkungan editor kode berbasis web dengan penyorotan sintaks dan eksekusi Python langsung di browser, memudahkan pengujian program serta penelusuran pesan kesalahan secara mandiri.",
+    src: "/images/code-monitor/fitur-2.png",
+    alt: "Editor Kode Berbasis Web dan Eksekusi Python Langsung di Browser",
+    folder: "public/images/code-monitor/fitur-2.png",
+  },
+  {
+    number: "03",
+    tag: "Inspeksi & Evaluasi",
+    title: "Pemantauan Kode Murid & Pengumpulan Tugas",
+    description:
+      "Inspeksi source code terkini yang sedang dikerjakan murid secara aman dengan menjaga privasi antar siswa, dilengkapi alur pengumpulan tugas praktikum yang terorganisasi langsung pada platform.",
+    src: "/images/code-monitor/fitur-3.png",
+    alt: "Pemantauan Kode Real-Time Murid dan Pengumpulan Tugas",
+    folder: "public/images/code-monitor/fitur-3.png",
+  },
+];
+
+const featuresList = [
+  {
+    letter: "A",
+    title: "Pengelolaan Kelas dan Praktik",
+    description:
+      "Guru dapat membuat kelas, menyiapkan sesi praktik, dan memberikan instruksi tugas pemrograman kepada murid.",
+    icon: FolderKanban,
+    color: "emerald",
+  },
+  {
+    letter: "B",
+    title: "Editor Kode Berbasis Web",
+    description:
+      "Murid dapat menulis dan mengedit kode pemrograman melalui editor yang dirancang untuk mendukung Python dan Arduino/C++.",
+    icon: Terminal,
+    color: "blue",
+  },
+  {
+    letter: "C",
+    title: "Penyimpanan Kode Otomatis",
+    description:
+      "Kode murid direncanakan tersimpan secara otomatis selama proses pengerjaan sehingga perkembangan pekerjaan dapat tercatat tanpa harus menyimpan secara manual setiap kali melakukan perubahan.",
+    icon: Save,
+    color: "amber",
+  },
+  {
+    letter: "D",
+    title: "Eksekusi Kode Python",
+    description:
+      "Murid direncanakan dapat menjalankan program Python langsung melalui browser serta melihat output dan pesan kesalahan untuk membantu proses pengujian dan perbaikan kode.",
+    icon: Play,
+    color: "emerald",
+  },
+  {
+    letter: "E",
+    title: "Dashboard Monitoring Guru",
+    description:
+      "Guru dapat memantau status praktik murid melalui satu dashboard, termasuk murid yang belum mulai, sedang mengerjakan, tidak menunjukkan aktivitas dalam periode tertentu, atau telah mengumpulkan tugas.",
+    icon: Eye,
+    color: "purple",
+  },
+  {
+    letter: "F",
+    title: "Pemantauan Kode Murid",
+    description:
+      "Guru dapat memilih murid untuk melihat kode terbaru yang sedang dikerjakan. Setiap murid dirancang hanya dapat mengakses kode miliknya sendiri sehingga privasi pekerjaan tetap terjaga.",
+    icon: ShieldCheck,
+    color: "blue",
+  },
+  {
+    letter: "G",
+    title: "Pengumpulan Tugas",
+    description:
+      "Murid dapat mengumpulkan kode melalui platform setelah menyelesaikan latihan. Guru kemudian dapat memeriksa hasil pekerjaan tanpa harus mengumpulkan berkas dari berbagai aplikasi.",
+    icon: FileCheck,
+    color: "emerald",
+  },
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="pt-8 md:pt-14 pb-16 md:pb-24 bg-[#fafaf9]">
+    <Container>
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-stone-500 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-emerald-700 transition-colors">Beranda</a>
+        <span>/</span>
+        <span class="text-stone-800 font-medium">Karya Pembelajaran</span>
+      </nav>
+
+      <div class="max-w-[860px] mx-auto space-y-14">
+        <!-- ================= HERO SECTION ================= -->
+        <header class="text-center">
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-[1.18] font-display mb-4">
+            CodeMonitor: Platform Praktik dan Monitoring Pemrograman Berbasis Web
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-[70ch] mx-auto mb-8">
+            Rancangan platform web terintegrasi untuk mendukung kegiatan praktik pemrograman murid sekaligus memfasilitasi guru dalam memantau proses belajar secara terpusat di SMK.
+          </p>
+
+          <!-- Hero Image with Fallback Placeholder -->
+          <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-stone-100 border border-stone-200/90 shadow-sm flex items-center justify-center group">
+            <img
+              src={heroImage.src}
+              alt={heroImage.alt}
+              loading="lazy"
+              class="w-full h-full object-cover relative z-10 transition-transform duration-500 group-hover:scale-101 cursor-zoom-in"
+              onerror="this.classList.add('hidden');"
+              onclick="window.openLightbox(this.src, this.alt)"
+            />
+
+            <button
+              type="button"
+              onclick={`window.openLightbox('${heroImage.src}', '${heroImage.alt}')`}
+              class="absolute top-4 right-4 z-20 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-900/80 hover:bg-stone-900 text-white backdrop-blur-sm shadow-md transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 cursor-pointer"
+              title="Perbesar gambar hero"
+            >
+              <ZoomIn class="w-3.5 h-3.5 text-stone-200" />
+              <span>Perbesar</span>
+            </button>
+
+            <!-- Placeholder UI if image not yet added -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-stone-50/95 text-stone-500 z-0">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 mb-3 group-hover:scale-105 transition-transform">
+                <ImageIcon class="w-7 h-7" />
+              </div>
+              <p class="text-sm sm:text-base font-bold text-stone-800 max-w-md">
+                {heroImage.alt}
+              </p>
+              <p class="text-xs text-stone-500 mt-2">
+                Letakkan file gambar di folder:
+              </p>
+              <code class="text-xs text-emerald-800 font-mono bg-white px-3 py-1 rounded-md border border-stone-200 mt-1 shadow-2xs font-semibold">
+                {heroImage.folder}
+              </code>
+            </div>
+          </div>
+        </header>
+
+        <!-- ================= CARD 1: LATAR BELAKANG ================= -->
+        <section id="latar-belakang" class="scroll-mt-24">
+          <div class="bg-white rounded-2xl border border-stone-200/90 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300">
+            <!-- Header Strip -->
+            <div class="px-6 py-4 bg-stone-50/80 border-b border-stone-100 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-emerald-50 text-emerald-800 border border-emerald-200">
+                  <span>1. Latar Belakang</span>
+                </span>
+              </div>
+              <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider hidden sm:inline">
+                Konteks & Permasalahan
+              </span>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-6">
+              <h2 class="text-xl sm:text-2xl font-bold text-stone-900 tracking-tight font-display">
+                Tantangan Pemantauan Praktik Pemrograman di Kelas SMK
+              </h2>
+
+              <p class="text-sm sm:text-base text-stone-700 leading-relaxed">
+                Pembelajaran Informatika di SMK, khususnya materi algoritma dan pemrograman, membutuhkan kegiatan praktik agar murid dapat menerapkan konsep yang telah dipelajari. Namun, dalam pelaksanaannya, guru menghadapi tantangan untuk memantau proses praktik seluruh murid secara bersamaan. Dengan jumlah <strong>36 murid dalam satu kelas</strong>, guru perlu membagi perhatian untuk memeriksa kode, mengetahui perkembangan pekerjaan, dan membantu murid yang mengalami kesulitan.
+              </p>
+
+              <div class="p-4 sm:p-5 rounded-xl bg-amber-50/60 border border-amber-200/70 text-amber-950 text-sm leading-relaxed">
+                <p class="font-semibold text-amber-900 mb-1 flex items-center gap-2">
+                  <span>Kendala Penggunaan Aplikasi Terpisah:</span>
+                </p>
+                <p class="text-stone-700">
+                  Apabila setiap murid menggunakan aplikasi pemrograman secara terpisah, guru perlu memeriksa pekerjaan satu per satu untuk mengetahui perkembangan praktik mereka. Kondisi ini dapat membuat proses pemantauan kurang efisien dan menyulitkan guru dalam menentukan murid yang membutuhkan pendampingan.
+                </p>
+              </div>
+
+              <div class="pt-2">
+                <div class="p-4 sm:p-5 rounded-xl bg-emerald-50/70 border border-emerald-200 text-stone-800 text-sm leading-relaxed">
+                  <p class="font-bold text-emerald-900 mb-1 flex items-center gap-2">
+                    <span>Gagasan Solusi:</span>
+                  </p>
+                  <p class="text-stone-700">
+                    Berdasarkan permasalahan tersebut, dikembangkan gagasan <strong>CodeMonitor</strong>, sebuah platform berbasis web yang mengintegrasikan aktivitas praktik pemrograman dengan fitur monitoring untuk membantu guru memantau perkembangan pekerjaan murid secara lebih terpusat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= CARD 2: MENGENAL CODEMONITOR ================= -->
+        <section id="mengenal" class="scroll-mt-24">
+          <div class="bg-white rounded-2xl border border-stone-200/90 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300">
+            <!-- Header Strip -->
+            <div class="px-6 py-4 bg-stone-50/80 border-b border-stone-100 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-sky-50 text-sky-900 border border-sky-200">
+                  <span>2. Mengenal CodeMonitor</span>
+                </span>
+              </div>
+              <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider hidden sm:inline">
+                Konsep & Desain Platform
+              </span>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-6">
+              <h2 class="text-xl sm:text-2xl font-bold text-stone-900 tracking-tight font-display">
+                Platform Praktik & Pemantauan Proses Berbasis Web
+              </h2>
+
+              <p class="text-sm sm:text-base text-stone-700 leading-relaxed">
+                <strong>CodeMonitor</strong> merupakan rancangan platform praktik dan monitoring pemrograman berbasis web yang ditujukan untuk mendukung pembelajaran Informatika di SMK. Platform ini dirancang agar murid dapat mengerjakan latihan pemrograman dalam satu lingkungan kerja, sementara guru dapat memantau status aktivitas dan melihat kode terbaru yang dikerjakan murid.
+              </p>
+
+              <!-- Bahasa Pemrograman yang Didukung -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                <div class="p-4 sm:p-5 rounded-xl bg-stone-50 border border-stone-200/80">
+                  <div class="flex items-center gap-2.5 text-stone-900 font-bold mb-2">
+                    <Terminal class="w-4 h-4 text-emerald-600" />
+                    <span>Praktik Python</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                    Murid direncanakan dapat menjalankan kode dan melihat hasil eksekusi secara langsung melalui browser tanpa instalasi perangkat lunak tambahan.
+                  </p>
+                </div>
+
+                <div class="p-4 sm:p-5 rounded-xl bg-stone-50 border border-stone-200/80">
+                  <div class="flex items-center gap-2.5 text-stone-900 font-bold mb-2">
+                    <Cpu class="w-4 h-4 text-sky-600" />
+                    <span>Kode Arduino / C++</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                    Kode Arduino/C++ dapat ditulis dan dipantau melalui platform, sedangkan proses kompilasi dan pengunggahan ke mikrokontroler tetap menggunakan Arduino IDE.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Fokus Pendekatan -->
+              <div class="p-4 sm:p-5 rounded-xl bg-white border-l-4 border-emerald-600 border border-stone-200 shadow-2xs">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800 mb-1.5 flex items-center gap-1.5">
+                  <span>Fokus pada Pemantauan Proses, Bukan Sekadar Hasil Akhir</span>
+                </h4>
+                <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">
+                  Pengembangan CodeMonitor berfokus pada kemudahan pemantauan proses praktik, bukan sekadar pengumpulan hasil akhir. Dengan demikian, guru diharapkan dapat lebih mudah mengidentifikasi murid yang belum memulai pekerjaan atau yang berpotensi membutuhkan bantuan selama pembelajaran berlangsung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= CARD 3: FITUR CODEMONITOR ================= -->
+        <section id="fitur" class="scroll-mt-24 space-y-8">
+          <div class="bg-white rounded-2xl border border-stone-200/90 shadow-xs overflow-hidden transition-all duration-200 hover:border-emerald-300">
+            <!-- Header Strip -->
+            <div class="px-6 py-4 bg-stone-50/80 border-b border-stone-100 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-purple-50 text-purple-900 border border-purple-200">
+                  <span>3. Fitur CodeMonitor</span>
+                </span>
+              </div>
+              <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider hidden sm:inline">
+                Rancangan Fungsionalitas
+              </span>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-8">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold text-stone-900 tracking-tight font-display mb-2">
+                  Fitur-Fitur Utama Platform
+                </h2>
+                <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+                  Tujuh fitur utama yang dirancang untuk mendukung interaksi antara ruang kerja coding murid dan panel kendali monitoring guru.
+                </p>
+              </div>
+
+              <!-- ================= 3 GAMBAR FITUR BESAR ================= -->
+              <div class="space-y-8 pt-2">
+
+                <div class="space-y-8">
+                  {featureImages.map((feat) => (
+                    <div class="bg-stone-50/70 rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:border-emerald-300 transition-all duration-200">
+                      <!-- Card Header -->
+                      <div class="p-5 sm:p-6 bg-white border-b border-stone-200/80 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                        <div class="space-y-1.5 max-w-2xl">
+                          <div class="flex items-center gap-2">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-900 border border-emerald-300">
+                              Fitur {feat.number}
+                            </span>
+                            <span class="text-xs font-semibold text-stone-500">
+                              {feat.tag}
+                            </span>
+                          </div>
+                          <h3 class="text-lg sm:text-xl font-bold text-stone-900 tracking-tight font-display">
+                            {feat.title}
+                          </h3>
+                          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                            {feat.description}
+                          </p>
+                        </div>
+
+                        <button
+                          type="button"
+                          onclick={`window.openLightbox('${feat.src}', '${feat.alt}')`}
+                          class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-300/80 transition-colors shrink-0 self-start sm:self-auto cursor-pointer"
+                        >
+                          <ZoomIn class="w-3.5 h-3.5 text-stone-600" />
+                          <span>Perbesar</span>
+                        </button>
+                      </div>
+
+                      <!-- Large Image Frame -->
+                      <div class="p-3 sm:p-5 bg-stone-100/70">
+                        <div class="relative w-full aspect-[16/10] sm:aspect-[16/9] bg-stone-200/40 rounded-xl border border-stone-200 overflow-hidden flex items-center justify-center group/view shadow-2xs">
+                          <img
+                            src={feat.src}
+                            alt={feat.alt}
+                            loading="lazy"
+                            class="w-full h-full object-contain relative z-10 transition-transform duration-300 group-hover/view:scale-[1.01] cursor-zoom-in"
+                            onerror="this.classList.add('hidden');"
+                            onclick="window.openLightbox(this.src, this.alt)"
+                          />
+
+                          <!-- Fallback UI if image not yet uploaded -->
+                          <div class="absolute inset-0 flex flex-col items-center justify-center p-6 sm:p-8 text-center bg-stone-50/95 text-stone-500 z-0">
+                            <div class="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 mb-3 shadow-inner group-hover/view:scale-105 transition-transform">
+                              <ImageIcon class="w-8 h-8" />
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-white px-2.5 py-0.5 rounded-md border border-stone-200 mb-2 shadow-2xs">
+                              Tangkapan Layar Fitur {feat.number}
+                            </span>
+                            <p class="text-base sm:text-lg font-bold text-stone-800 max-w-lg mb-1">
+                              {feat.alt}
+                            </p>
+                            <p class="text-xs text-stone-500 mt-2">
+                              Simpan file gambar di folder:
+                            </p>
+                            <code class="text-xs text-emerald-800 font-mono bg-white px-3 py-1.5 rounded-md border border-stone-200 mt-1 shadow-2xs font-semibold">
+                              {feat.folder}
+                            </code>
+                            <p class="text-[11px] text-stone-400 mt-2">
+                              Rekomendasi rasio 16:9 atau 16:10 (misal: 1920×1080 atau 1440×900)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <!-- ================= 7 FITUR LENGKAP ================= -->
+              <div class="pt-6 border-t border-stone-200/80 space-y-4">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-stone-700">
+                  Rincian Seluruh Fitur:
+                </h3>
+
+                <div class="grid grid-cols-1 gap-3.5">
+                  {featuresList.map((f) => {
+                    const IconComponent = f.icon;
+                    return (
+                      <div class="p-4 rounded-xl bg-white border border-stone-200 hover:border-emerald-300 transition-colors flex items-start gap-3.5 shadow-2xs">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center font-bold text-xs">
+                          {f.letter}
+                        </div>
+
+                        <div class="flex-1">
+                          <h4 class="text-sm font-bold text-stone-900 mb-1 flex items-center gap-2">
+                            <span>{f.title}</span>
+                          </h4>
+                          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                            {f.description}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= KESIMPULAN & HARAPAN ================= -->
+        <section class="pt-2">
+          <div class="bg-gradient-to-br from-stone-900 via-stone-850 to-emerald-950 text-white rounded-3xl p-6 sm:p-8 md:p-10 border border-stone-800 shadow-lg relative overflow-hidden">
+            <div class="absolute -right-12 -top-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                <span>Harapan Pengembangan</span>
+              </span>
+            </div>
+
+            <h3 class="text-xl sm:text-2xl font-bold tracking-tight font-display mb-4 text-stone-50">
+              Mewujudkan Pemantauan dan Pendampingan Praktik yang Efisien
+            </h3>
+
+            <p class="text-sm sm:text-base text-stone-200 leading-relaxed font-light mb-6">
+              Melalui pengembangan fitur-fitur tersebut, <strong>CodeMonitor</strong> diharapkan menjadi solusi pendukung pembelajaran pemrograman yang membantu guru melakukan pemantauan dan pendampingan secara lebih efisien. Kebermanfaatannya akan dievaluasi setelah prototipe diuji dalam kegiatan pembelajaran nyata di kelas SMK.
+            </p>
+          </div>
+        </section>
+
+        <!-- Navigation Footer Links -->
+        <div class="pt-8 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <Button href="/refleksi" variant="secondary" size="md" class="w-full sm:w-auto">
+            <span>Buka Refleksi Mata Kuliah</span>
+          </Button>
+
+          <Button href="/refleksi-ppg" variant="primary" size="md" class="w-full sm:w-auto">
+            <span>Buka Refleksi PPG</span>
+            <ArrowRight class="w-4 h-4 ml-2" />
+          </Button>
+        </div>
+      </div>
+    </Container>
+  </div>
+
+  <!-- Lightbox Modal Dialog for Large Image Inspection -->
+  <dialog
+    id="image-lightbox-dialog"
+    class="backdrop:bg-stone-950/85 backdrop:backdrop-blur-sm bg-transparent p-3 sm:p-6 max-w-6xl w-full max-h-[96vh] rounded-2xl outline-none shadow-2xl m-auto overflow-hidden"
+  >
+    <div class="relative flex flex-col bg-stone-900 text-white rounded-2xl border border-stone-800 overflow-hidden shadow-2xl">
+      <!-- Modal Header -->
+      <div class="px-5 py-3.5 bg-stone-950/90 border-b border-stone-800 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+          <p id="lightbox-caption" class="text-xs sm:text-sm font-medium text-stone-200 truncate">
+            Pratinjau Gambar
+          </p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a
+            id="lightbox-raw-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs text-stone-300 hover:text-white rounded-lg hover:bg-stone-800 transition-colors"
+            title="Buka gambar di tab baru"
+          >
+            <ExternalLink class="w-3.5 h-3.5" />
+            <span class="hidden sm:inline">Tab Baru</span>
+          </a>
+          <button
+            id="lightbox-close-btn"
+            type="button"
+            class="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-stone-800 hover:bg-stone-700 text-stone-200 rounded-lg transition-colors cursor-pointer"
+          >
+            <X class="w-3.5 h-3.5" />
+            <span>Tutup (Esc)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Image Body -->
+      <div class="p-2 sm:p-4 flex items-center justify-center bg-stone-950/70 overflow-auto max-h-[80vh]">
+        <img
+          id="lightbox-img"
+          src=""
+          alt=""
+          class="max-w-full max-h-[76vh] object-contain rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+  </dialog>
+
+  <script is:inline>
+    window.openLightbox = function (src, caption) {
+      const dialog = document.getElementById('image-lightbox-dialog');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      const link = document.getElementById('lightbox-raw-link');
+      if (!dialog || !img) return;
+
+      img.src = src;
+      img.alt = caption || 'Pratinjau Gambar';
+      if (cap) cap.textContent = caption || 'Pratinjau Gambar';
+      if (link) link.href = src;
+
+      dialog.showModal();
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const dialog = document.getElementById('image-lightbox-dialog');
+      const closeBtn = document.getElementById('lightbox-close-btn');
+
+      if (closeBtn && dialog) {
+        closeBtn.addEventListener('click', () => dialog.close());
+      }
+
+      if (dialog) {
+        dialog.addEventListener('click', (e) => {
+          const rect = dialog.getBoundingClientRect();
+          const isInDialog =
+            rect.top <= e.clientY &&
+            e.clientY <= rect.top + rect.height &&
+            rect.left <= e.clientX &&
+            e.clientX <= rect.left + rect.width;
+          if (!isInDialog) {
+            dialog.close();
+          }
+        });
+      }
+    });
+  </script>
+</Layout>
