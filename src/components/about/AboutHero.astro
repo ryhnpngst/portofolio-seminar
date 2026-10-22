@@ -1,9 +1,8 @@
 ---
 import { profile } from "../../data/profile";
 import Container from "../common/Container.astro";
-import Badge from "../common/Badge.astro";
 import Button from "../common/Button.astro";
-import { Mail, Github, Linkedin, MapPin, GraduationCap, Award, BookOpen } from "lucide-astro";
+import { Github, Linkedin} from "lucide-astro";
 ---
 
 <section class="pt-8 md:pt-14 pb-14 md:pb-20 bg-stone-50 border-b border-stone-200/70">
@@ -28,24 +27,12 @@ import { Mail, Github, Linkedin, MapPin, GraduationCap, Award, BookOpen } from "
               fetchpriority="high"
               class="w-full h-full object-cover object-top"
             />
-            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-stone-900/85 via-stone-900/40 to-transparent text-white">
-              <p class="text-base font-bold font-display">{profile.name}</p>
-              <p class="text-xs text-emerald-300 font-medium">{profile.role} · {profile.field}</p>
-            </div>
           </div>
         </div>
       </div>
 
       <!-- Right Column: Profile Identity & Quick Facts -->
       <div class="lg:col-span-7 flex flex-col items-start text-left">
-        <div class="inline-flex items-center gap-2 mb-3">
-          <Badge variant="primary" size="sm">
-            PROFIL PENDIDIK
-          </Badge>
-          <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider">
-            {profile.field}
-          </span>
-        </div>
 
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-[1.15] font-display mb-4">
           Mendedikasikan Keilmuan Informatika untuk Masa Depan Pendidikan
@@ -55,57 +42,9 @@ import { Mail, Github, Linkedin, MapPin, GraduationCap, Award, BookOpen } from "
           {profile.bio}
         </p>
 
-        <!-- Quick Credentials Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-8">
-          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-stone-200/80">
-            <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
-              <GraduationCap class="w-5 h-5" />
-            </div>
-            <div>
-              <p class="text-xs text-stone-500 font-medium">Program Studi</p>
-              <p class="text-xs sm:text-sm font-semibold text-stone-800">PPG Calon Guru Informatika</p>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-stone-200/80">
-            <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
-              <Award class="w-5 h-5" />
-            </div>
-            <div>
-              <p class="text-xs text-stone-500 font-medium">Gelar Kependidikan</p>
-              <p class="text-xs sm:text-sm font-semibold text-stone-800">S.Pd. Ilmu Komputer</p>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-stone-200/80">
-            <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
-              <BookOpen class="w-5 h-5" />
-            </div>
-            <div>
-              <p class="text-xs text-stone-500 font-medium">Fokus Keahlian</p>
-              <p class="text-xs sm:text-sm font-semibold text-stone-800">Computational Thinking & Web</p>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-stone-200/80">
-            <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
-              <MapPin class="w-5 h-5" />
-            </div>
-            <div>
-              <p class="text-xs text-stone-500 font-medium">Domisili</p>
-              <p class="text-xs sm:text-sm font-semibold text-stone-800">{profile.location}</p>
-            </div>
-          </div>
-        </div>
-
         <!-- Social & Action Links -->
         <div class="flex flex-wrap items-center gap-3 w-full pt-4 border-t border-stone-200/80">
-          {profile.socialLinks.email && (
-            <Button href={profile.socialLinks.email} variant="primary" size="md">
-              <Mail class="w-4 h-4 mr-2" />
-              <span>Hubungi Saya</span>
-            </Button>
-          )}
+          
           {profile.socialLinks.github && (
             <Button
               href={profile.socialLinks.github}

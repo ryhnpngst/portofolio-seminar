@@ -1,0 +1,127 @@
+---
+import Container from "../common/Container.astro";
+import SectionHeader from "../common/SectionHeader.astro";
+import Badge from "../common/Badge.astro";
+import {
+  Globe,
+  GraduationCap,
+  Sparkles,
+  Award,
+  Laptop,
+  Users,
+  CheckCircle2,
+} from "lucide-astro";
+
+const missions = [
+  {
+    icon: Award,
+    title: "Peningkatan Kompetensi Berkelanjutan",
+    description:
+      "Terus meningkatkan kompetensi pedagogik dan profesional melalui partisipasi aktif dalam pelatihan, workshop, serta program Pengembangan Keprofesian Berkelanjutan (PKB).",
+  },
+  {
+    icon: Sparkles,
+    title: "Pembelajaran Berpusat pada Murid",
+    description:
+      "Menerapkan pendekatan pembelajaran yang aktif, bermakna, dan kontekstual melalui model Problem-Based Learning (PBL) serta Project-Based Learning (PjBL) sesuai karakteristik murid.",
+  },
+  {
+    icon: Laptop,
+    title: "Pemanfaatan Media & Teknologi Digital",
+    description:
+      "Memanfaatkan platform, media digital interaktif, dan perangkat teknologi secara bijak untuk mempermudah visualisasi materi logika dan komputasi Informatika.",
+  },
+  {
+    icon: Users,
+    title: "Komunikasi & Kolaborasi Ekosistem",
+    description:
+      "Membangun komunikasi dua arah yang positif serta kemitraan sinergis bersama peserta didik, rekan sejawat guru, pimpinan sekolah, dan orang tua murid.",
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-white border-b border-stone-200/70">
+  <Container>
+    <!-- Section Header -->
+    <div class="max-w-[760px] mb-12 md:mb-16">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 tracking-tight leading-[1.2] font-display mb-4">
+        Visi & Misi Guru Profesional
+      </h2>
+      <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
+        Prinsip dasar dan arah langkah nyata yang memandu setiap perancangan pembelajaran, interaksi dengan peserta didik, serta komitmen pengabdian dalam ekosistem pendidikan Informatika.
+      </p>
+    </div>
+
+    <!-- Vision: Two Strategic Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 md:mb-16">
+      <!-- Visi 1: Pendidikan Indonesia -->
+      <div class="group relative flex flex-col p-8 sm:p-9 rounded-[24px] border border-stone-200/90 bg-stone-50/70 hover:bg-stone-50 hover:border-emerald-300 transition-all duration-300 shadow-xs">
+        <h3 class="text-xl sm:text-2xl font-bold text-stone-900 font-display mb-3 tracking-tight">
+          Visi untuk Pendidikan di Indonesia
+        </h3>
+
+        <div class="space-y-3.5 text-stone-600 leading-relaxed text-sm sm:text-base flex-1">
+          <p>
+            Mewujudkan pendidikan yang <strong>berpusat pada murid</strong>, <strong>adaptif terhadap perkembangan teknologi</strong>, dan mampu menghasilkan lulusan yang berkarakter, kreatif, kritis, serta siap menghadapi dunia kerja dan perkembangan zaman.
+          </p>
+          <p class="text-stone-500 text-sm italic pt-1 border-t border-stone-200/70">
+            "Saya percaya setiap peserta didik berhak memperoleh kesempatan belajar yang berkualitas sesuai dengan potensinya masing-masing."
+          </p>
+        </div>
+      </div>
+
+      <!-- Visi 2: Pribadi sebagai Calon Guru -->
+      <div class="group relative flex flex-col p-8 sm:p-9 rounded-[24px] border border-stone-200/90 bg-stone-50/70 hover:bg-stone-50 hover:border-emerald-300 transition-all duration-300 shadow-xs">
+        <h3 class="text-xl sm:text-2xl font-bold text-stone-900 font-display mb-3 tracking-tight">
+          Visi Pribadi sebagai Calon Guru
+        </h3>
+
+        <div class="space-y-3.5 text-stone-600 leading-relaxed text-sm sm:text-base flex-1">
+          <p>
+            Menjadi <strong>guru Informatika yang inovatif dan inspiratif</strong> dengan menciptakan iklim pembelajaran yang aktif, bermakna, dan memanfaatkan kemajuan teknologi secara bijak serta beretika.
+          </p>
+          <p class="text-stone-500 text-sm italic pt-1 border-t border-stone-200/70">
+            "Berkomitmen membimbing peserta didik agar menguasai kompetensi digital abad ke-21, daya nalar komputasional, serta pondasi karakter luhur."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission: Strategic Action Steps -->
+    <div class="rounded-[24px] border border-stone-200 bg-stone-50/50 p-7 sm:p-10 lg:p-12">
+      <div class="max-w-[700px] mb-8">
+        <h3 class="text-xl sm:text-2xl font-bold text-stone-900 font-display mb-2">
+          Upaya Nyata dalam Mewujudkan Visi
+        </h3>
+        <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+          Tindakan konkret yang saya laksanakan untuk mencapai visi pendidikan melalui perbaikan terus-menerus pada ranah pedagogik, teknologi, dan hubungan kemanusiaan.
+        </p>
+      </div>
+
+      <!-- 4 Pillars of Action Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        {missions.map((mission, idx) => {
+          const Icon = mission.icon;
+          return (
+            <div class="flex items-start gap-4 p-5 sm:p-6 rounded-[18px] bg-white border border-stone-200/80 shadow-2xs hover:border-emerald-300 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-200/60 mt-0.5">
+                <Icon class="w-5 h-5" />
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-1.5">
+                  <h4 class="text-base font-bold text-stone-900 font-display">
+                    {mission.title}
+                  </h4>
+                </div>
+                <p class="text-sm text-stone-600 leading-relaxed">
+                  {mission.description}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </Container>
+</section>
+

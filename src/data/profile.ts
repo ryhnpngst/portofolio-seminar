@@ -52,7 +52,6 @@ export interface ProfileData {
   socialLinks: {
     github?: string;
     linkedin?: string;
-    email?: string;
   };
   education: EducationItem[];
   teachingExperience: ExperienceItem[];
@@ -91,8 +90,7 @@ export const profile: ProfileData = {
   },
   socialLinks: {
     github: "https://github.com/ryhnpngst",
-    linkedin: "https://linkedin.com",
-    email: "mailto:rayhan@example.com",
+    linkedin: "https://www.linkedin.com/in/rayhanpangestuw/",
   },
   education: [
     {
