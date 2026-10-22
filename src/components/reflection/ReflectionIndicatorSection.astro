@@ -1,15 +1,12 @@
 ---
 import type { ReflectionSection } from "../../utils/reflectionParser";
 import ReflectionQuestionCard from "./ReflectionQuestionCard.astro";
-import { FolderCheck, Sparkles } from "lucide-astro";
 
 interface Props {
   section: ReflectionSection;
 }
 
 const { section } = Astro.props;
-
-const is4C = section.type === "4c";
 ---
 
 <section id={section.id} class="scroll-mt-24 mb-14 md:mb-18">

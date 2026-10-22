@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   Target,
   MessageSquare,
-  HelpCircle,
 } from "lucide-astro";
 
 interface Props {
@@ -65,7 +64,6 @@ const colorClasses: Record<string, { badge: string; pill: string; icon: any; bor
 };
 
 const currentStyle = colorClasses[item.color] || colorClasses.emerald;
-const CategoryIcon = currentStyle.icon;
 const formattedNumber = String(item.questionNumber).padStart(2, "0");
 ---
 

@@ -9,17 +9,6 @@ export interface FeaturedReflection {
   tags: string[];
 }
 
-export interface FeaturedWork {
-  title: string;
-  category: "Modul Ajar" | "LKPD" | "Media Pembelajaran" | "Projek";
-  description: string;
-  image: string;
-  imageAlt: string;
-  technologies: string[];
-  externalUrl?: string;
-  link: string;
-}
-
 export interface PPLHighlightData {
   title: string;
   subtitle: string;
@@ -68,40 +57,6 @@ export const featuredReflections: FeaturedReflection[] = [
     imageAlt: "Dokumentasi refleksi Prinsip Pengajaran dan Asesmen",
     slug: "pembelajaran-mendalam-dan-asesmen-dasar-smk",
     tags: ["Understanding by Design", "Diferensiasi", "Asesmen"],
-  },
-];
-
-export const featuredWorks: FeaturedWork[] = [
-  {
-    title: "Modul Ajar Berpikir Komputasional Fase E",
-    category: "Modul Ajar",
-    description:
-      "Modul ajar interaktif dengan pendekatan problem-based learning untuk materi algoritma, pola pencarian, dan dekomposisi masalah.",
-    image: "/images/works/modul-ajar.jpg",
-    imageAlt: "Dokumen Modul Ajar Berpikir Komputasional Fase E",
-    technologies: ["Kurikulum Merdeka", "PBL", "Informatika Fase E"],
-    link: "/karya/modul-ajar-algoritma",
-  },
-  {
-    title: "LKPD Interaktif Logika Percabangan",
-    category: "LKPD",
-    description:
-      "Lembar Kerja Peserta Didik berjenjang (scaffolded) untuk melatih penalaran logika percabangan kondisional pada pemrograman dasar.",
-    image: "/images/works/lkpd-algoritma.jpg",
-    imageAlt: "Tampilan Lembar Kerja Peserta Didik Logika Percabangan",
-    technologies: ["Scaffolding", "Pseudocode", "Studi Kasus"],
-    link: "/karya/lkpd-percabangan",
-  },
-  {
-    title: "Media Pembelajaran Web Interaktif Algoritma",
-    category: "Media Pembelajaran",
-    description:
-      "Aplikasi web visualisasi step-by-step algoritma sorting dan searching untuk membantu siswa memahami alur komputasi secara intuitif.",
-    image: "/images/works/media-interaktif.jpg",
-    imageAlt: "Aplikasi Web Visualisasi Algoritma",
-    technologies: ["Web App", "Visualisasi", "Algoritma"],
-    externalUrl: "https://example.com/demo-algoritma",
-    link: "/karya/media-interaktif",
   },
 ];
 
