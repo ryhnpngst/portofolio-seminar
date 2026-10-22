@@ -46,11 +46,11 @@ export const journeySteps: JourneyStep[] = [
       { name: "Filosofi Pendidikan Indonesia", slug: "filosofi-pendidikan" },
       { name: "Pemahaman Peserta Didik", slug: "pemahaman-peserta-didik" },
       {
-        name: "Prinsip Pengajaran & Asesmen I",
-        slug: "prinsip-pengajaran-asesmen",
+        name: "Pembelajaran Mendalam dan Asesmen Dasar SMK",
+        slug: "pembelajaran-mendalam-dan-asesmen-dasar-smk",
       },
     ],
-    image: "/images/reflections/filosofi-pendidikan.jpg",
+    image: "/images/reflections/filosofi-pendidikan.jpeg",
     imageAlt:
       "Dokumentasi pembelajaran teori dan filosofi pendidikan Semester 1",
     link: "/refleksi",
@@ -79,7 +79,7 @@ export const journeySteps: JourneyStep[] = [
       { name: "Praktik Pengalaman Lapangan I (PPL I)" },
       { name: "Manajemen Kelas & Budaya Sekolah" },
     ],
-    image: "/images/ppl/praktik-mengajar.jpg",
+    image: "/images/ppl/praktik-terbimbing.JPG",
     imageAlt:
       "Dokumentasi kegiatan praktik pembelajaran terbimbing di laboratorium sekolah mitra",
     link: "/ppl",
@@ -110,7 +110,7 @@ export const journeySteps: JourneyStep[] = [
       { name: "Projek Kepemimpinan" },
       { name: "Teknologi Baru dalam Pengajaran" },
     ],
-    image: "/images/works/media-interaktif.jpg",
+    image: "/images/works/sibenka.jpg",
     imageAlt:
       "Pengembangan media pembelajaran interaktif dan inovasi teknologi Semester 2",
     link: "/refleksi",
@@ -122,7 +122,7 @@ export const journeySteps: JourneyStep[] = [
     title: "PPL Mandiri",
     stage: "Penguasaan Kelas & Asesmen Mandiri",
     period: "PPL II",
-    badge: "Praktik Lapangan Penuh",
+    badge: "Praktik Lapangan Mandiri",
     description:
       "Melaksanakan siklus pembelajaran mandiri secara utuh, asesmen formatif-sumatif, serta refleksi perbaikan berkesinambungan.",
     fullDescription:
@@ -139,7 +139,7 @@ export const journeySteps: JourneyStep[] = [
       { name: "Praktik Pengalaman Lapangan II (PPL II)" },
       { name: "Lesson Study & PTK Kolaboratif" },
     ],
-    image: "/images/works/modul-ajar.jpg",
+    image: "/images/ppl/praktik-mengajar.jpg",
     imageAlt: "Dokumentasi pelaksanaan PPL Mandiri dan perangkat modul ajar",
     link: "/ppl",
     linkLabel: "Dokumentasi PPL II",
