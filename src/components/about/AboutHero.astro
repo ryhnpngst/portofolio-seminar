@@ -43,8 +43,7 @@ import { Github, Linkedin} from "lucide-astro";
         </p>
 
         <!-- Social & Action Links -->
-        <div class="flex flex-wrap items-center gap-3 w-full pt-4 border-t border-stone-200/80">
-          
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto pt-4 border-t border-stone-200/80">
           {profile.socialLinks.github && (
             <Button
               href={profile.socialLinks.github}
@@ -52,6 +51,7 @@ import { Github, Linkedin} from "lucide-astro";
               size="md"
               target="_blank"
               rel="noopener noreferrer"
+              class="w-full sm:w-auto"
             >
               <Github class="w-4 h-4 mr-2" />
               <span>GitHub</span>
@@ -64,6 +64,7 @@ import { Github, Linkedin} from "lucide-astro";
               size="md"
               target="_blank"
               rel="noopener noreferrer"
+              class="w-full sm:w-auto"
             >
               <Linkedin class="w-4 h-4 mr-2" />
               <span>LinkedIn</span>

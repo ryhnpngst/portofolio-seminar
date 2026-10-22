@@ -124,6 +124,14 @@ const isActive = (href: string) => {
   const iconClose = document.getElementById("icon-close");
 
   if (button && menu && iconMenu && iconClose) {
+    const closeMenu = () => {
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", "Buka menu navigasi");
+      menu.classList.add("hidden");
+      iconMenu.classList.remove("hidden");
+      iconClose.classList.add("hidden");
+    };
+
     button.addEventListener("click", () => {
       const isExpanded = button.getAttribute("aria-expanded") === "true";
       button.setAttribute("aria-expanded", (!isExpanded).toString());
@@ -135,6 +143,32 @@ const isActive = (href: string) => {
       menu.classList.toggle("hidden");
       iconMenu.classList.toggle("hidden");
       iconClose.classList.toggle("hidden");
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !menu.classList.contains("hidden")) {
+        closeMenu();
+      }
+    });
+
+    // Close on outside click
+    document.addEventListener("click", (e) => {
+      const target = e.target as Node;
+      if (
+        !menu.classList.contains("hidden") &&
+        !menu.contains(target) &&
+        !button.contains(target)
+      ) {
+        closeMenu();
+      }
+    });
+
+    // Close menu when resized to desktop viewport
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768 && !menu.classList.contains("hidden")) {
+        closeMenu();
+      }
     });
   }
 </script>
