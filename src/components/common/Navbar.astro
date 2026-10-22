@@ -1,6 +1,6 @@
 ---
 import { navItems } from "../../data/navigation";
-import { Menu, X, ArrowRight } from "lucide-astro";
+import { Menu, X } from "lucide-astro";
 
 const currentPath = Astro.url.pathname;
 
@@ -58,17 +58,6 @@ const isActive = (href: string) => {
       })}
     </nav>
 
-    <!-- Desktop Secondary CTA -->
-    <div class="hidden md:flex items-center">
-      <a
-        href="/refleksi-akhir"
-        class="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200/80 hover:bg-emerald-100 hover:text-emerald-900 transition-all active:scale-[0.98]"
-      >
-        <span>Refleksi Akhir</span>
-        <ArrowRight class="w-3.5 h-3.5 text-emerald-700" />
-      </a>
-    </div>
-
     <!-- Mobile Hamburger Button -->
     <div class="flex items-center md:hidden">
       <button
@@ -109,15 +98,6 @@ const isActive = (href: string) => {
           </a>
         );
       })}
-      <div class="pt-3 mt-2 border-t border-stone-200">
-        <a
-          href="/refleksi-akhir"
-          class="flex items-center justify-center gap-2 w-full px-4 py-3 text-sm font-semibold rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
-        >
-          <span>Baca Refleksi Akhir</span>
-          <ArrowRight class="w-4 h-4" />
-        </a>
-      </div>
     </nav>
   </div>
 </header>

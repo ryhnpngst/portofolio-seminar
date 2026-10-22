@@ -73,7 +73,7 @@ export const profile: ProfileData = {
   bio: "Calon guru Informatika yang berdedikasi menciptakan pembelajaran yang bermakna, berpusat pada peserta didik, serta mengintegrasikan computational thinking dan teknologi secara kontekstual.",
   shortBio:
     "Perjalanan belajar menjadi seorang guru profesional melalui refleksi mendalam, praktik pembelajaran nyata di sekolah, dan dedikasi pada kemajuan pendidikan Informatika.",
-  photo: "/images/profile/profile.jpg",
+  photo: "/images/profile/profile.png",
   photoAlt:
     "Foto profil Rayhan Pangestu Wibowo - Mahasiswa PPG Calon Guru Informatika",
   location: "Indonesia",
@@ -103,8 +103,8 @@ export const profile: ProfileData = {
         "Program penyiapan guru profesional yang berfokus pada penguatan kompetensi pedagogik, kepribadian, sosial, dan profesional melalui perkuliahan terstruktur dan Praktik Pengalaman Lapangan (PPL).",
     },
     {
-      degree: "Sarjana Pendidikan (S.Pd.) / Ilmu Komputer",
-      institution: "Program Studi Pendidikan Ilmu Komputer / Informatika",
+      degree: "Sarjana Pendidikan (S.Pd.)",
+      institution: "Program Studi Pendidikan Teknik Informatika",
       period: "2020 - 2024",
       description:
         "Mendalami landasan keilmuan informatika, algoritma dan struktur data, rekayasa perangkat lunak, serta metodologi pengajaran dan desain kurikulum kependidikan komputer.",
