@@ -8,7 +8,7 @@ export const navItems: NavItem[] = [
   { label: "Tentang", href: "/tentang" },
   { label: "Perjalanan", href: "/perjalanan" },
   { label: "Refleksi Mata Kuliah", href: "/refleksi" },
-  { label: "Refleksi PPG", href: "/ppl" },
+  { label: "Refleksi PPG", href: "/refleksi-ppg" },
   { label: "Karya", href: "/karya" },
 ];
 
@@ -17,6 +17,6 @@ export const footerNavItems: NavItem[] = [
   { label: "Tentang Saya", href: "/tentang" },
   { label: "Perjalanan PPG", href: "/perjalanan" },
   { label: "Refleksi Mata Kuliah", href: "/refleksi" },
-  { label: "Refleksi PPG", href: "/ppl" },
+  { label: "Refleksi PPG", href: "/refleksi-ppg" },
   { label: "Karya Pembelajaran", href: "/karya" },
 ];

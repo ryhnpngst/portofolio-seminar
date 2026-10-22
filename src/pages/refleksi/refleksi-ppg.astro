@@ -1,0 +1,378 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/common/Container.astro";
+import Button from "../../components/common/Button.astro";
+import { profile } from "../../data/profile";
+import {
+  GraduationCap,
+  Compass,
+  Target,
+  Sparkles,
+  MessageSquare,
+  Quote,
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-astro";
+
+const pageTitle = `Refleksi PPG | ${profile.name}`;
+const pageDescription = `Refleksi menyeluruh pengalaman belajar, transformasi peran guru, dan rencana tindak lanjut program ${profile.program} ${profile.name}.`;
+
+const indicator1 = {
+  id: "indikator-pengalaman-belajar",
+  badge: "Indikator 01",
+  title: "Refleksi Pengalaman Belajar Program PPG",
+  subtitle: "Transformasi Cara Pandang & Fondasi Guru Profesional",
+  description:
+    "Refleksi kritis terhadap pengalaman belajar selama menempuh program PPG Calon Guru, merumuskan arah ideal pendidikan Indonesia, dan menetapkan langkah konkret pengembangan keprofesian pendidik.",
+  questions: [
+    {
+      id: "q-1",
+      number: "01",
+      category: "Visi Pendidikan",
+      categoryDesc: "Arah & Cita-Cita Pendidikan Nasional",
+      color: "emerald",
+      icon: Compass,
+      question:
+        "Bagaimana seharusnya pendidikan di Indonesia?",
+      points: [
+        "Pendidikan Indonesia seharusnya berpusat pada murid, memberikan kesempatan belajar yang adil, serta mengembangkan potensi akademik, karakter, dan keterampilan secara seimbang.",
+        "Pembelajaran perlu relevan dengan perkembangan zaman, teknologi, dan kebutuhan dunia kerja, terutama pada pendidikan vokasi seperti SMK.",
+        "Pendidikan seharusnya tidak hanya berorientasi pada nilai, tetapi juga membentuk murid yang berkarakter, mandiri, mampu berpikir kritis, kreatif, dan siap menghadapi perubahan.",
+      ],
+    },
+    {
+      id: "q-2",
+      number: "02",
+      category: "Guru Profesional",
+      categoryDesc: "Komitmen & Peningkatan 4 Kompetensi",
+      color: "blue",
+      icon: GraduationCap,
+      question:
+        "Langkah menjadi guru profesional?",
+      points: [
+        "Saya akan terus meningkatkan kompetensi pedagogik, profesional, sosial, dan kepribadian melalui belajar, refleksi, pelatihan, serta pengalaman mengajar.",
+        "Saya akan mengembangkan pembelajaran yang kontekstual, kreatif, inovatif, dan dekat dengan situasi nyata di dunia kerja.",
+        "Saya akan melakukan refleksi dan evaluasi secara rutin untuk memperbaiki pembelajaran berdasarkan pengalaman, hasil asesmen, serta umpan balik dari murid dan rekan sejawat.",
+      ],
+    },
+  ],
+};
+
+const indicator2 = {
+  id: "indikator-tindak-lanjut",
+  badge: "Indikator 02",
+  title: "Rencana Tindak Lanjut",
+  subtitle: "Langkah Strategis Memulai Karir Pendidik",
+  description:
+    "Rencana aksi nyata yang dirancang untuk diterapkan saat mengawali kiprah mengajar di sekolah, memastikan pembelajaran bermakna dan berpihak pada murid.",
+  questions: [
+    {
+      id: "q-3",
+      number: "03",
+      category: "Rencana Aksi Awal Karir",
+      categoryDesc: "Tiga Pilar Utama Memulai Tugas Guru",
+      color: "purple",
+      icon: Target,
+      question:
+        "Langkah penting yang akan dilakukan saat memulai karir sebagai guru?",
+      points: [
+        "Memahami murid secara menyeluruh melalui observasi dan asesmen awal agar pembelajaran dapat disesuaikan dengan kemampuan, kebutuhan, karakteristik, dan kondisi mereka.",
+        "Merancang pembelajaran yang bermakna dan kontekstual dengan menghubungkan materi dengan praktik nyata serta kebutuhan dunia kerja.",
+        "Melakukan refleksi secara berkelanjutan untuk mengevaluasi pembelajaran, memperbaiki kekurangan, dan mengembangkan kompetensi sebagai guru profesional.",
+      ],
+    },
+  ],
+};
+
+const keyRoles = [
+  { label: "Pendidik", desc: "Membimbing budi pekerti dan kodrat murid" },
+  { label: "Fasilitator", desc: "Menyediakan ruang belajar aktif & merdeka" },
+  { label: "Teladan", desc: "Ing ngarsa sung tuladha dalam tindakan" },
+  { label: "Pembelajar Sepanjang Hayat", desc: "Adaptif terhadap perkembangan zaman" },
+  { label: "Penggerak Perubahan", desc: "Menginspirasi inovasi di lingkungan sekolah" },
+];
+
+const colorStyles: Record<string, { badge: string; border: string; pill: string }> = {
+  emerald: {
+    badge: "bg-emerald-50 text-emerald-800 border-emerald-200",
+    border: "hover:border-emerald-300",
+    pill: "bg-emerald-600 text-white",
+  },
+  blue: {
+    badge: "bg-sky-50 text-sky-900 border-sky-200",
+    border: "hover:border-sky-300",
+    pill: "bg-sky-600 text-white",
+  },
+  purple: {
+    badge: "bg-purple-50 text-purple-900 border-purple-200",
+    border: "hover:border-purple-300",
+    pill: "bg-purple-600 text-white",
+  },
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="pt-8 md:pt-14 pb-16 md:pb-24 bg-[#fafaf9]">
+    <Container>
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-stone-500 mb-8" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-emerald-700 transition-colors">Beranda</a>
+        <span>/</span>
+        <span class="text-stone-800 font-medium">Refleksi PPG</span>
+      </nav>
+
+      <div class="max-w-[860px] mx-auto">
+        <!-- Page Header -->
+        <header class="mb-12 md:mb-16 text-center">
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-[1.15] font-display mb-4">
+            Refleksi Menyeluruh Program PPG
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-[70ch] mx-auto">
+            Sintesis komprehensif terhadap seluruh rangkaian pembelajaran, transformasi pola pikir pendidik, serta rumusan rencana tindak lanjut dalam menyongsong pengabdian profesional sebagai guru.
+          </p>
+        </header>
+
+        <!-- Main Content Layout -->
+        <div class="space-y-16">
+        <!-- INDIKATOR 01 -->
+        <section id={indicator1.id} class="scroll-mt-24">
+          <div class="mb-6 pb-4 border-b border-stone-200">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-2.5">
+              <div class="inline-flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-emerald-100 text-emerald-900 border border-emerald-300">
+                  <span>{indicator1.badge}</span>
+                </span>
+                <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider">
+                  {indicator1.questions.length} Pertanyaan Reflektif
+                </span>
+              </div>
+              <span class="text-xs font-medium text-stone-500">
+                {indicator1.subtitle}
+              </span>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-stone-900 tracking-tight font-display mb-2">
+              {indicator1.title}
+            </h2>
+
+            <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+              {indicator1.description}
+            </p>
+          </div>
+
+          <!-- Cards List Indikator 1 -->
+          <div class="grid grid-cols-1 gap-6">
+            {indicator1.questions.map((q) => {
+              const style = colorStyles[q.color] || colorStyles.emerald;
+              return (
+                <div
+                  class:list={[
+                    "group/card bg-white rounded-2xl border border-stone-200/90 shadow-xs transition-all duration-200 overflow-hidden flex flex-col",
+                    style.border,
+                  ]}
+                >
+                  <!-- Card Header Strip -->
+                  <div class="px-5 sm:px-6 py-3.5 bg-stone-50/70 border-b border-stone-100 flex flex-wrap items-center justify-between gap-2.5">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class:list={[
+                          "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase border",
+                          style.badge,
+                        ]}
+                      >
+                        <span>{q.category}</span>
+                      </span>
+
+                      <span class="text-xs font-semibold text-stone-500 bg-white px-2 py-0.5 rounded-md border border-stone-200">
+                        Pertanyaan {q.number}
+                      </span>
+                    </div>
+
+                    <span class="text-xs font-medium text-stone-500 hidden sm:inline">
+                      {q.categoryDesc}
+                    </span>
+                  </div>
+
+                  <!-- Question Section -->
+                  <div class="px-5 sm:px-6 pt-5 pb-4">
+                    <h3 class="text-base sm:text-lg font-bold text-stone-900 tracking-tight leading-snug font-display">
+                      {q.question}
+                    </h3>
+                  </div>
+
+                  <!-- Uraian Jawaban Body -->
+                  <div class="px-5 sm:px-6 pb-6 pt-1 flex-1 flex flex-col border-t border-stone-100/90 mt-1">
+                    <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-800 mt-3 mb-3">
+                      <MessageSquare class="w-3 h-3 text-emerald-600" />
+                      <span>Uraian Refleksi & Jawaban</span>
+                    </div>
+
+                    <ol class="space-y-3 flex-1">
+                      {q.points.map((point, idx) => (
+                        <li class="flex items-start gap-3 text-sm text-stone-700 leading-relaxed group/item">
+                          <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-stone-100 text-stone-700 font-bold text-xs border border-stone-200 mt-0.5 group-hover/item:bg-emerald-600 group-hover/item:text-white group-hover/item:border-emerald-600 transition-colors">
+                            {idx + 1}
+                          </span>
+                          <span class="flex-1 pt-0.5">{point}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <!-- INDIKATOR 02 -->
+        <section id={indicator2.id} class="scroll-mt-24">
+          <div class="mb-6 pb-4 border-b border-stone-200">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-2.5">
+              <div class="inline-flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-emerald-100 text-emerald-900 border border-emerald-300">
+                  <span>{indicator2.badge}</span>
+                </span>
+                <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider">
+                  {indicator2.questions.length} Pertanyaan Reflektif
+                </span>
+              </div>
+              <span class="text-xs font-medium text-stone-500">
+                {indicator2.subtitle}
+              </span>
+            </div>
+
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-stone-900 tracking-tight font-display mb-2">
+              {indicator2.title}
+            </h2>
+
+            <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+              {indicator2.description}
+            </p>
+          </div>
+
+          <!-- Cards List Indikator 2 -->
+          <div class="grid grid-cols-1 gap-6">
+            {indicator2.questions.map((q) => {
+              const style = colorStyles[q.color] || colorStyles.purple;
+              return (
+                <div
+                  class:list={[
+                    "group/card bg-white rounded-2xl border border-stone-200/90 shadow-xs transition-all duration-200 overflow-hidden flex flex-col",
+                    style.border,
+                  ]}
+                >
+                  <!-- Card Header Strip -->
+                  <div class="px-5 sm:px-6 py-3.5 bg-stone-50/70 border-b border-stone-100 flex flex-wrap items-center justify-between gap-2.5">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class:list={[
+                          "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase border",
+                          style.badge,
+                        ]}
+                      >
+                        <span>{q.category}</span>
+                      </span>
+
+                      <span class="text-xs font-semibold text-stone-500 bg-white px-2 py-0.5 rounded-md border border-stone-200">
+                        Pertanyaan {q.number}
+                      </span>
+                    </div>
+
+                    <span class="text-xs font-medium text-stone-500 hidden sm:inline">
+                      {q.categoryDesc}
+                    </span>
+                  </div>
+
+                  <!-- Question Section -->
+                  <div class="px-5 sm:px-6 pt-5 pb-4">
+                    <h3 class="text-base sm:text-lg font-bold text-stone-900 tracking-tight leading-snug font-display">
+                      {q.question}
+                    </h3>
+                  </div>
+
+                  <!-- Uraian Jawaban Body -->
+                  <div class="px-5 sm:px-6 pb-6 pt-1 flex-1 flex flex-col border-t border-stone-100/90 mt-1">
+                    <div class="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-800 mt-3 mb-3">
+                      <MessageSquare class="w-3 h-3 text-emerald-600" />
+                      <span>Uraian Refleksi & Jawaban</span>
+                    </div>
+
+                    <ol class="space-y-3 flex-1">
+                      {q.points.map((point, idx) => (
+                        <li class="flex items-start gap-3 text-sm text-stone-700 leading-relaxed group/item">
+                          <span class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-stone-100 text-stone-700 font-bold text-xs border border-stone-200 mt-0.5 group-hover/item:bg-emerald-600 group-hover/item:text-white group-hover/item:border-emerald-600 transition-colors">
+                            {idx + 1}
+                          </span>
+                          <span class="flex-1 pt-0.5">{point}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <!-- KESIMPULAN SECTION -->
+        <section class="pt-4">
+          <div class="relative bg-gradient-to-br from-stone-900 via-stone-850 to-emerald-950 text-white rounded-3xl p-6 sm:p-8 md:p-10 border border-stone-800 shadow-lg overflow-hidden">
+            <!-- Decorative Accent -->
+            <div class="absolute -right-12 -top-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Header Badge -->
+            <div class="flex items-center gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                <Quote class="w-3.5 h-3.5 text-emerald-400" />
+                <span>Kesimpulan Refleksi</span>
+              </span>
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight font-display mb-6 text-stone-50">
+              Transformasi Peran & Makna Menjadi Pendidik
+            </h2>
+
+            <!-- Conclusion Narrative -->
+            <p class="text-base sm:text-lg text-stone-200 leading-relaxed mb-8 font-light">
+              Secara keseluruhan, PPG memberikan perubahan dalam cara pandang saya terhadap profesi guru. Saya memahami bahwa guru bukan sekadar penyampai materi, melainkan pendidik, fasilitator, teladan, pembelajar sepanjang hayat, dan penggerak perubahan. Berbagai pengalaman selama perkuliahan, PPL, projek, serta kegiatan refleksi membantu saya menjadi lebih percaya diri, reflektif, adaptif, dan memahami pentingnya pembelajaran yang berpusat pada murid. Pengalaman tersebut menjadi bekal bagi saya untuk terus berkembang dan memberikan pembelajaran Tata Hidang yang bermakna, relevan, dan sesuai kebutuhan murid serta dunia kerja.
+            </p>
+
+            <!-- 5 Core Roles Chips -->
+            <div class="pt-6 border-t border-stone-800/80">
+              <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-4">
+                Lima Peran Kunci Guru Profesional:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                {keyRoles.map((role) => (
+                  <div class="p-3 rounded-xl bg-stone-800/60 border border-stone-700/60 flex items-start gap-2.5">
+                    <CheckCircle2 class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <div>
+                      <p class="text-sm font-semibold text-white">{role.label}</p>
+                      <p class="text-xs text-stone-400 leading-snug">{role.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Navigation Footer Links -->
+        <div class="pt-8 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <Button href="/refleksi" variant="secondary" size="md" class="w-full sm:w-auto">
+            <span>Lihat Refleksi Mata Kuliah</span>
+          </Button>
+
+          <Button href="/perjalanan" variant="primary" size="md" class="w-full sm:w-auto">
+            <span>Lihat Linimasa Perjalanan PPG</span>
+            <ArrowRight class="w-4 h-4 ml-2" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
+</Layout>
+

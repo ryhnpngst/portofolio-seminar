@@ -117,5 +117,5 @@ export const pplHighlight: PPLHighlightData = {
     teachingHours: "100+ Jam Praktik",
     cycles: "4 Siklus Pembelajaran",
   },
-  link: "/ppl",
+  link: "/refleksi-ppg",
 };

@@ -8,6 +8,21 @@ const isActive = (href: string) => {
   if (href === "/") {
     return currentPath === "/" || currentPath === "";
   }
+  if (href === "/refleksi") {
+    return (
+      currentPath === "/refleksi" ||
+      currentPath === "/refleksi/" ||
+      (currentPath.startsWith("/refleksi/") && !currentPath.startsWith("/refleksi/refleksi-ppg"))
+    );
+  }
+  if (href === "/refleksi-ppg") {
+    return (
+      currentPath === "/refleksi-ppg" ||
+      currentPath.startsWith("/refleksi-ppg/") ||
+      currentPath === "/refleksi/refleksi-ppg" ||
+      currentPath.startsWith("/refleksi/refleksi-ppg/")
+    );
+  }
   return currentPath.startsWith(href);
 };
 ---

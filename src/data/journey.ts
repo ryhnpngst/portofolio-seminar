@@ -82,7 +82,7 @@ export const journeySteps: JourneyStep[] = [
     image: "/images/ppl/praktik-terbimbing.JPG",
     imageAlt:
       "Dokumentasi kegiatan praktik pembelajaran terbimbing di laboratorium sekolah mitra",
-    link: "/ppl",
+    link: "/refleksi-ppg",
     linkLabel: "Dokumentasi PPL I",
   },
   {
@@ -141,7 +141,7 @@ export const journeySteps: JourneyStep[] = [
     ],
     image: "/images/ppl/praktik-mengajar.jpg",
     imageAlt: "Dokumentasi pelaksanaan PPL Mandiri dan perangkat modul ajar",
-    link: "/ppl",
+    link: "/refleksi-ppg",
     linkLabel: "Dokumentasi PPL II",
   },
 ];
