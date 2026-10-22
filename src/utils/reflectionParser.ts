@@ -75,13 +75,17 @@ export function parseReflectionTable(
   if (!markdown) return null;
 
   const lines = markdown.split("\n");
-  const tableRows = lines.filter(
-    (l) =>
-      l.trim().startsWith("|") &&
-      !l.includes("---") &&
-      !l.includes("**Indikator**") &&
-      l.trim() !== "|  |  |  |",
-  );
+  const tableRows = lines.filter((l) => {
+    const trimmed = l.trim();
+    if (!trimmed.startsWith("|")) return false;
+    if (trimmed.includes("---")) return false;
+    if (trimmed.includes("**Indikator**")) return false;
+
+    // Check if the row contains any non-empty cell content
+    const inner = trimmed.replace(/^\|/, "").replace(/\|$/, "");
+    const cells = inner.split("|").map((c) => c.trim());
+    return cells.some((c) => c.length > 0);
+  });
 
   if (tableRows.length === 0) return null;
 
@@ -142,33 +146,38 @@ export function parseReflectionTable(
   let currentSectionIdx = 0;
   let qInSec = 0;
 
-  tableRows.forEach((row, rIdx) => {
+  tableRows.forEach((row) => {
     const cells = row
       .split("|")
       .map((c) => c.trim())
       .filter((c) => c.length > 0);
+
+    // Skip rows without at least 2 cells (question and answer)
+    if (cells.length < 2) return;
 
     let questionText = "";
     let answerText = "";
 
     if (cells.length >= 3) {
       const indicatorCell = cells[0].toLowerCase();
-      if (indicatorCell.includes("artefak") || rIdx >= 4) {
+      if (indicatorCell.includes("artefak")) {
         currentSectionIdx = 1;
         qInSec = 0;
-      } else {
+      } else if (indicatorCell.includes("refleksi") || indicatorCell.includes("4c")) {
         currentSectionIdx = 0;
         qInSec = 0;
       }
       questionText = cells[1];
       answerText = cells[2];
-    } else if (cells.length === 2) {
+    } else {
       questionText = cells[0];
       answerText = cells[1];
     }
 
     // Clean question text (remove leading "1. ", "2. ", etc.)
     const cleanQuestion = cleanText(questionText).replace(/^\d+\.\s*/, "");
+    if (!cleanQuestion && !answerText) return;
+
     const parsedAnswer = parseAnswerText(answerText);
     const catList =
       currentSectionIdx === 0 ? fourCCategories : artifactCategories;

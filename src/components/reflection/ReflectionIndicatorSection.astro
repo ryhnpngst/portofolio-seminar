@@ -1,7 +1,7 @@
 ---
 import type { ReflectionSection } from "../../utils/reflectionParser";
 import ReflectionQuestionCard from "./ReflectionQuestionCard.astro";
-import { BookOpen, FolderCheck, Sparkles } from "lucide-astro";
+import { FolderCheck, Sparkles } from "lucide-astro";
 
 interface Props {
   section: ReflectionSection;
@@ -10,7 +10,6 @@ interface Props {
 const { section } = Astro.props;
 
 const is4C = section.type === "4c";
-const SectionIcon = is4C ? Sparkles : FolderCheck;
 ---
 
 <section id={section.id} class="scroll-mt-24 mb-14 md:mb-18">
@@ -19,7 +18,6 @@ const SectionIcon = is4C ? Sparkles : FolderCheck;
     <div class="flex flex-wrap items-center justify-between gap-3 mb-2.5">
       <div class="inline-flex items-center gap-2">
         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-emerald-100 text-emerald-900 border border-emerald-300">
-          <SectionIcon class="w-3.5 h-3.5 text-emerald-700" />
           <span>{section.badge}</span>
         </span>
         <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider">
@@ -43,8 +41,10 @@ const SectionIcon = is4C ? Sparkles : FolderCheck;
 
   <!-- Cards List -->
   <div class="grid grid-cols-1 gap-5 md:gap-6">
-    {section.items.map((item) => (
-      <ReflectionQuestionCard item={item} />
-    ))}
+    {section.items
+      .filter((item) => item.question || item.rawAnswer)
+      .map((item) => (
+        <ReflectionQuestionCard item={item} />
+      ))}
   </div>
 </section>

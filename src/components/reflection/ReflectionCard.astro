@@ -19,7 +19,7 @@ interface Props {
 
 const { reflection, class: className = "" } = Astro.props;
 const defaultImage = reflection.semester === 1
-  ? "/images/reflections/filosofi-pendidikan.jpg"
+  ? "/images/reflections/filosofi-pendidikan.jpeg"
   : "/images/works/modul-ajar.jpg";
 const displayImage = reflection.image || defaultImage;
 const displayAlt = reflection.imageAlt || reflection.title;

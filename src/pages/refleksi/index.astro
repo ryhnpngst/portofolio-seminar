@@ -1,12 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/common/Container.astro";
-import Badge from "../../components/common/Badge.astro";
 import ReflectionCard from "../../components/reflection/ReflectionCard.astro";
 import ReflectionFilter from "../../components/reflection/ReflectionFilter.astro";
 import { getCollection } from "astro:content";
 import { profile } from "../../data/profile";
-import { BookOpen, Sparkles, Filter } from "lucide-astro";
+import { Filter } from "lucide-astro";
 
 // Fetch all published reflections from content collection
 const allReflections = await getCollection("reflections", ({ data }) => data.published);
@@ -39,14 +38,6 @@ const pageDescription = `Kumpulan refleksi kritis terhadap 11 mata kuliah Semest
 
       <!-- Page Header -->
       <div class="max-w-[840px] mb-12">
-        <div class="inline-flex items-center gap-2 mb-3">
-          <Badge variant="primary" size="sm">
-            DOKUMENTASI AKADEMIK
-          </Badge>
-          <span class="text-xs font-semibold text-stone-500 uppercase tracking-wider">
-            {profile.field}
-          </span>
-        </div>
 
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 tracking-tight leading-[1.15] font-display mb-4">
           Refleksi Pembelajaran Mata Kuliah
@@ -55,18 +46,6 @@ const pageDescription = `Kumpulan refleksi kritis terhadap 11 mata kuliah Semest
         <p class="text-base sm:text-lg text-stone-600 leading-relaxed mb-6">
           Dokumentasi mendalam terhadap perjalanan belajar, analisis pengalaman, tantangan instruksional, serta perubahan perspektif pedagogik dari seluruh mata kuliah Semester 1 dan Semester 2 PPG Calon Guru.
         </p>
-
-        <!-- Key stats row -->
-        <div class="flex flex-wrap items-center gap-6 pt-6 border-t border-stone-200/80 text-xs sm:text-sm text-stone-600">
-          <div class="flex items-center gap-2">
-            <BookOpen class="w-4 h-4 text-emerald-600" />
-            <span><strong>{totalCount}</strong> Mata Kuliah Terdokumentasi</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <Sparkles class="w-4 h-4 text-emerald-600" />
-            <span>Model Refleksi 4C & Analisis Artefak</span>
-          </div>
-        </div>
       </div>
 
       <!-- Filter Controls Bar -->
@@ -95,7 +74,6 @@ const pageDescription = `Kumpulan refleksi kritis terhadap 11 mata kuliah Semest
                 image: entry.data.image,
                 imageAlt: entry.data.imageAlt,
                 slug,
-                tags: entry.data.tags,
               }}
             />
           );
