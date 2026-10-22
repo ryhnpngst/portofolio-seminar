@@ -41,9 +41,9 @@ export const featuredReflections: FeaturedReflection[] = [
     semester: 1,
     description:
       "Mendalami pemikiran Ki Hajar Dewantara mengenai sistem among, kodrat alam, dan kodrat zaman sebagai landasan memerdekakan murid dalam belajar.",
-    image: "/images/reflections/filosofi-pendidikan.jpg",
+    image: "/images/reflections/filosofi-pendidikan.jpeg",
     imageAlt: "Dokumentasi refleksi Filosofi Pendidikan Indonesia",
-    slug: "filosofi-pendidikan",
+    slug: "filosofi-pendidikan-dan-pendidikan-nilai",
     tags: ["Ki Hajar Dewantara", "Sistem Among", "Merdeka Belajar"],
   },
   {
@@ -52,20 +52,21 @@ export const featuredReflections: FeaturedReflection[] = [
     semester: 1,
     description:
       "Menggali karakteristik perkembangan kognitif, sosio-emosional peserta didik, serta penerapan asesmen diagnostik untuk merancang pembelajaran tepat sasaran.",
-    image: "/images/reflections/pemahaman-peserta-didik.jpg",
+    image: "/images/reflections/pemahaman-peserta-didik.jpeg",
     imageAlt: "Dokumentasi refleksi Pemahaman tentang Peserta Didik",
-    slug: "pemahaman-peserta-didik",
+    slug: "pemahaman-tentang-peserta-didik-dan-pembelajarannya",
     tags: ["Asesmen Diagnostik", "Karakteristik Murid", "Teori Belajar"],
   },
   {
-    title: "Prinsip Pengajaran dan Asesmen I",
+    title: "Prinsip Mendalam dan Asesmen Dasar SMK",
     shortTitle: "Pengajaran & Asesmen",
     semester: 1,
     description:
       "Merancang perangkat ajar dengan pendekatan Understanding by Design (UbD) dan pembelajaran berdiferensiasi yang selaras dengan capaian pembelajaran Fase E.",
-    image: "/images/reflections/prinsip-pengajaran.jpg",
+    image:
+      "/images/reflections/pemnbelajaran-mendalam-dan-asesmen-dasar-smk.jpeg",
     imageAlt: "Dokumentasi refleksi Prinsip Pengajaran dan Asesmen",
-    slug: "prinsip-pengajaran-asesmen",
+    slug: "pembelajaran-mendalam-dan-asesmen-dasar-smk",
     tags: ["Understanding by Design", "Diferensiasi", "Asesmen"],
   },
 ];
@@ -108,7 +109,7 @@ export const pplHighlight: PPLHighlightData = {
   title: "Praktik Pengalaman Lapangan (PPL)",
   subtitle: "Dari Observasi Terbimbing Menuju Kemandirian Mengajar Penuh",
   description:
-    "PPL menjadi wahana menguji teori pedagogik ke dalam dinamika kelas nyata di sekolah mitra. Mulai dari membangun kedekatan dengan peserta didik, merancang diferensiasi materi, hingga mengevaluasi efektivitas asesmen bersama Guru Pamong.",
+    "PPL menjadi kesempatan untuk menguji teori pedagogik ke dalam dinamika kelas nyata di sekolah mitra. Mulai dari membangun kedekatan dengan peserta didik, merancang diferensiasi materi, hingga mengevaluasi efektivitas asesmen bersama Guru Pamong.",
   image: "/images/ppl/praktik-mengajar.jpg",
   imageAlt: "Praktik pembelajaran aktif di laboratorium komputer sekolah mitra",
   stats: {

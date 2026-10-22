@@ -5,9 +5,16 @@ import SectionHeader from "../common/SectionHeader.astro";
 import ReflectionCard from "../reflection/ReflectionCard.astro";
 import Button from "../common/Button.astro";
 import { ArrowRight } from "lucide-astro";
+
+// Fallback slug mapping to ensure links always point to valid routes
+const slugMap: Record<string, string> = {
+  "filosofi-pendidikan": "filosofi-pendidikan-dan-pendidikan-nilai",
+  "pemahaman-peserta-didik": "pemahaman-tentang-peserta-didik-dan-pembelajarannya",
+  "prinsip-pengajaran-asesmen": "pembelajaran-mendalam-dan-asesmen-dasar-smk",
+};
 ---
 
-<section class="py-16 md:py-24 bg-stone-50 border-b border-stone-200/70">
+<section class="py-16 md:py-24 bg-white border-b border-stone-200/70">
   <Container>
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <SectionHeader
@@ -25,9 +32,12 @@ import { ArrowRight } from "lucide-astro";
 
     <!-- 3-Column Reflection Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-      {featuredReflections.map((reflection) => (
-        <ReflectionCard reflection={reflection} />
-      ))}
+      {featuredReflections.map((reflection) => {
+        const resolvedSlug = slugMap[reflection.slug] || reflection.slug;
+        return (
+          <ReflectionCard reflection={{ ...reflection, slug: resolvedSlug }} />
+        );
+      })}
     </div>
   </Container>
 </section>

@@ -144,32 +144,4 @@ export const journeySteps: JourneyStep[] = [
     link: "/ppl",
     linkLabel: "Dokumentasi PPL II",
   },
-  {
-    id: "refleksi-akhir",
-    stepNumber: 5,
-    title: "Refleksi Akhir",
-    stage: "Sintesis Transformasi Identitas Guru",
-    period: "Penutup Program",
-    badge: "Sintesis & Komitmen",
-    description:
-      "Merekam perubahan paradigma, perkembangan kompetensi, dan komitmen profesional sebagai guru Informatika seutuhnya.",
-    fullDescription:
-      "Menutup seluruh rangkaian program PPG Calon Guru dengan merekonstruksi kembali perjalanan belajar. Menelaah evolusi diri dari seseorang yang memandang pendidikan secara teknis mekanistis menjadi pendidik yang berpusat pada murid, empatik, serta siap berkomitmen memajukan pendidikan nasional secara berkelanjutan.",
-    keyExperiences: [
-      "Menyusun portofolio digital komprehensif yang mendokumentasikan bukti karya, refleksi, dan artefak belajar.",
-      "Melakukan metakognisi terhadap perkembangan kompetensi pedagogik, kepribadian, sosial, dan profesional.",
-      "Merumuskan komitmen tindak lanjut dan rencana pengembangan diri berkelanjutan (continuing professional development).",
-    ],
-    keyTakeaways:
-      "Gelar dan sertifikat pendidik adalah awal dari perjalanan seumur hidup. Menjadi guru adalah janji untuk terus belajar, beradaptasi, dan setia mendampingi tumbuhnya generasi penerus bangsa.",
-    relatedCourses: [
-      { name: "Seminar Pendidikan Profesi Guru" },
-      { name: "Penyusunan Portofolio Digital" },
-    ],
-    image: "/images/profile/profile.jpg",
-    imageAlt: "Refleksi akhir peneguhan identitas profesional calon guru",
-    link: "/refleksi-akhir",
-    linkLabel: "Baca Refleksi Akhir",
-    highlight: true,
-  },
 ];
